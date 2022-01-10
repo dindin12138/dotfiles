@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id st
 
 # start ranger
-#bindsym $mod+Shift+t exec --no-startup-id st -e ranger
+bindsym $mod+Shift+t exec --no-startup-id st -e ranger
 
 # start browser
 # bindsym $mod+g exec --no-startup-id google-chrome-stable
@@ -54,29 +54,14 @@ bindsym $mod+e exec --no-startup-id pcmanfm
 # start flameshot
 bindsym $mod+Shift+f exec --no-startup-id flameshot gui
 
-# deopdown terminal
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 900 650
-for_window [instance="dropdown"] move scratchpad
-for_window [instance="dropdown"] border none
-exec --no-startup-id alacritty --class dropdown
-bindsym $mod+Shift+t [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
-
-# math terminal
-for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 925 400
-for_window [instance="math"] move scratchpad
-for_window [instance="math"] border none
-exec --no-startup-id alacritty --class math -e eva
-bindsym $mod+Shift+m [instance="math"] scratchpad show; [instance="math"] move position center
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
 #bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec --no-startup-id rofi -show drun
-#bindsym $mod+Tab exec --no-startup-id rofi -show window
+#bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/colorblocks/launcher.rasi
+
 
 # change wallpaper
 bindsym $mod+p exec --no-startup-id variety -n
@@ -375,7 +360,7 @@ exec --no-startup-id kdeconnect-indicator
 # exec --no-startup-id ~/.config/i3/wallpic.sh
 # exec --no-startup-id ~/.config/i3/inverse-scroll.sh
 exec --no-startup-id libinput-gestures-setup start
-exec_always --no-startup-id ~/.config/polybar/cuts/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
