@@ -1,0 +1,19 @@
+# ignore everythin
+/*
+/*/
+
+# ... but these:
+!/alacritty/
+!/ranger/
+!/i3/
+!/i3status/
+!/st/
+!/dunst/
+!/fcitx5/
+!/polybar/
+!/zsh/
+!/rofi/
+!/pip/
+!/img/
+!/.gitignore
+!/.README.md
