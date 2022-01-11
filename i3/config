@@ -33,7 +33,10 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id st
 
 # start ranger
-bindsym $mod+Shift+t exec --no-startup-id st -e ranger
+# bindsym $mod+Shift+t exec --no-startup-id st -e ranger
+
+# start tty-clock
+bindsym $mod+Shift+t exec --no-startup-id st -e tty-clock -csDC 7
 
 # start browser
 # bindsym $mod+g exec --no-startup-id google-chrome-stable
