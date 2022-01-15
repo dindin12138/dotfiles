@@ -15,7 +15,10 @@
 !/pip/
 !/img/
 !/flameshot/
+
 !/st/
+/st/st
+/st/*.o
 
 !/dwm/
 /dwm/dwm
