@@ -15,14 +15,11 @@
 !/pip/
 !/img/
 !/flameshot/
-
-!/st/
-/st/st
-/st/*.o
-
 !/dwm/
 /dwm/dwm
 /dwm/*.o
-
+!/slstatus/
+/slstatus/slstatus
+/slstatus/*.o
 !/.gitignore
 !/.README.md
