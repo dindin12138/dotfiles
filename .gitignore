@@ -18,6 +18,7 @@
 !/dwm/
 /dwm/dwm
 /dwm/*.o
+/dwm/*.orig
 !/slstatus/
 /slstatus/slstatus
 /slstatus/*.o
