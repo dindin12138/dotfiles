@@ -366,6 +366,7 @@ exec --no-startup-id kdeconnect-indicator
 # exec --no-startup-id ~/.config/i3/inverse-scroll.sh
 exec --no-startup-id libinput-gestures-setup start
 exec_always --no-startup-id ~/.config/polybar/start.sh
+exec --no-startup-id qv2ray
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
