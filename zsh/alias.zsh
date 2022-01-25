@@ -1,3 +1,5 @@
 alias ll="ls -la"
 alias nf="neofetch --ascii_distro Arch"
 alias ra="ranger"
+alias proxy_up="export all_proxy=http://127.0.0.1:8889"
+alias proxy_down="unset all_proxy"
