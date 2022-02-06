@@ -22,5 +22,6 @@
 !/slstatus/
 /slstatus/slstatus
 /slstatus/*.o
+!/libinput-gestures.conf
 !/.gitignore
 !/.README.md
