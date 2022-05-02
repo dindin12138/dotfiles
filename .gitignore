@@ -3,6 +3,7 @@
 /*/
 
 # ... but these:
+!/awesome/
 !/alacritty/
 !/ranger/
 !/i3/
