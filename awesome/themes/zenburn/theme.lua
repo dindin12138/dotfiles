@@ -13,6 +13,7 @@ local theme = {}
 
 -- {{{ Styles
 theme.font = "Fira Code Nerd Font 10"
+theme.taglist_font = "Fira Code Nerd Font 12"
 
 -- {{{ Colors
 theme.fg_normal  = "#ffffff"
@@ -73,8 +74,8 @@ theme.menu_width  = dpi(100)
 
 -- {{{ Icons
 -- {{{ Taglist
-theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
-theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
+-- theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
+-- theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 
