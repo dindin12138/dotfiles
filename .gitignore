@@ -4,6 +4,7 @@
 
 # ... but these:
 !/awesome/
+!/picom/
 !/alacritty/
 !/ranger/
 !/i3/
