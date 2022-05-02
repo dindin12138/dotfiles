@@ -30,13 +30,13 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec terminal
-bindsym $mod+Return exec --no-startup-id st
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # start ranger
 # bindsym $mod+Shift+t exec --no-startup-id st -e ranger
 
 # start tty-clock
-bindsym $mod+Shift+t exec --no-startup-id st -e tty-clock -csDC 7
+bindsym $mod+Shift+t exec --no-startup-id alacritty -e tty-clock -csDC 7
 
 # start browser
 # bindsym $mod+g exec --no-startup-id google-chrome-stable
@@ -61,8 +61,8 @@ bindsym $mod+Shift+f exec --no-startup-id flameshot gui
 bindsym $mod+Shift+q kill
 
 # start program launcher
-#bindsym $mod+d exec --no-startup-id dmenu_recency
-#bindsym $mod+d exec --no-startup-id rofi -show drun
+# bindsym $mod+d exec --no-startup-id dmenu_recency
+# bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+d exec --no-startup-id rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/colorblocks/launcher.rasi
 
 # change wallpaper
@@ -78,31 +78,55 @@ bindsym $mod+Shift+p exec --no-startup-id ~/.config/polybar/start.sh
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+# bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
+# exec --no-startup-id pulseaudio
+# exec --no-startup-id pa-applet
+# bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
+
+# Autostart applications
+exec --no-startup-id volumeicon
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id picom -b
+# exec --no-startup-id manjaro-hello
+exec --no-startup-id nm-applet  # wifi icon
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id pamac-tray
+# exec --no-startup-id clipit
+# exec --no-startup-id blueman-applet
+# exec_always --no-startup-id sbxkb
+# exec --no-startup-id start_conky_maia
+# exec --no-startup-id start_conky_green
+# exec --no-startup-id xautolock -time 10 -locker blurlock
+#exec_always --no-startup-id ff-theme-util
+#exec_always --no-startup-id fix_xcursor
+exec --no-startup-id fcitx5
+exec --no-startup-id nutstore
+exec --no-startup-id variety
+exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id libinput-gestures-setup start
+exec_always --no-startup-id ~/.config/polybar/start.sh
+exec --no-startup-id qv2ray
 
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
-bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
+# bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
+# bindsym $mod+F2 exec palemoon
+# bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+# bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+# bindsym $mod+F5 exec terminal -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill picom
-bindsym $mod+Ctrl+t exec --no-startup-id picom -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+# bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+# bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
@@ -338,45 +362,13 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 # bindsym $mod+9 exec --no-startup-id i3lock-fancy
 
-# Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-# Nitrogen 默认配置壁纸软件
-exec --no-startup-id picom -b
-# exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet  # wifi icon
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-# exec --no-startup-id xautolock -time 10 -locker blurlock
-#exec_always --no-startup-id ff-theme-util
-#exec_always --no-startup-id fix_xcursor
-
-# AutoStart Applications
-exec --no-startup-id fcitx5
-exec --no-startup-id nutstore
-exec --no-startup-id variety
-# exec_always --no-startup-id feh --randomize --bg-fill /home/dzk/'Nutstore Files'/Nutstore/图片/girl.jpg
-# exec_always --no-startup-id feh --bg-fill /home/dzk/Wallpaper/15.png
-# exec --no-startup-id kdeconnect-app
-exec --no-startup-id kdeconnect-indicator
-# exec --no-startup-id ~/.config/i3/wallpic.sh
-# exec --no-startup-id ~/.config/i3/inverse-scroll.sh
-exec --no-startup-id libinput-gestures-setup start
-exec_always --no-startup-id ~/.config/polybar/start.sh
-exec --no-startup-id qv2ray
-
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
 # https://i3wm.org/docs/userguide.html#xresources
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -443,7 +435,7 @@ set_from_resource $term_color15    color15
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -463,7 +455,7 @@ gaps outer -2
 # Smart gaps (gaps used if only more than one container on the workspace)
 # smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
