@@ -17,3 +17,4 @@ run fcitx5
 run variety
 run kdeconnect-indicator
 run qv2ray
+run nutstore

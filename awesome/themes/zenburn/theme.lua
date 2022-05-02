@@ -18,9 +18,9 @@ theme.taglist_font = "Fira Code Nerd Font 12"
 -- {{{ Colors
 theme.fg_normal  = "#ffffff"
 theme.fg_focus   = "#ffffff"
-theme.fg_urgent  = "#268BD2"
+theme.fg_urgent  = "#80FFF9"
 theme.bg_normal  = "#00000099"
-theme.bg_focus   = "#595B5B99"
+theme.bg_focus   = "#00000099"
 theme.bg_urgent  = "#222D31AA"
 theme.bg_systray = "#00000099"
 -- }}}
