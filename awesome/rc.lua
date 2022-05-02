@@ -45,9 +45,9 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
--- theme_dir = "~/.config/awesome/themes/default/"
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
--- beautiful.init(theme_dir .. "theme.lua")
+-- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+theme_dir = "~/.config/awesome/themes/"
+beautiful.init(theme_dir .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -67,10 +67,10 @@ modkey = "Mod1"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.fair,
-    awful.layout.suit.max,
-    awful.layout.suit.floating,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.max,
+    -- awful.layout.suit.floating,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
@@ -92,82 +92,82 @@ awful.layout.layouts = {
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
-    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-    { "manual", terminal .. " -e man awesome" },
-    { "edit config", editor_cmd .. " " .. awesome.conffile },
-    { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end },
-}
+-- myawesomemenu = {
+--     { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
+--     { "manual", terminal .. " -e man awesome" },
+--     { "edit config", editor_cmd .. " " .. awesome.conffile },
+--     { "restart", awesome.restart },
+--     { "quit", function() awesome.quit() end },
+-- }
 
-editormenu = {
-    { "neovim", terminal .. "-e nvim" },
-    { "helix", "kitty -e helix" },
-    { "vscode", "code" },
-}
+-- editormenu = {
+--     { "neovim", terminal .. "-e nvim" },
+--     { "helix", "kitty -e helix" },
+--     { "vscode", "code" },
+-- }
 
-officemenu = {
-    { "files", "nautilus" },
-    { "Word", "wps" },
-    { "Excel", "et" },
-    { "Power Point", "wpp" },
-}
+-- officemenu = {
+--     { "files", "nautilus" },
+--     { "Word", "wps" },
+--     { "Excel", "et" },
+--     { "Power Point", "wpp" },
+-- }
 
-networkmenu = {
-    { "chrome", "google-chrome-stable" },
-    { "firefox", "firefox" },
-    { "nm-editor", "nm-connection-editor" },
-}
+-- networkmenu = {
+--     { "chrome", "google-chrome-stable" },
+--     { "firefox", "firefox" },
+--     { "nm-editor", "nm-connection-editor" },
+-- }
 
-termmenu = {
-    { "st", "st" },
-    { "wezterm", "wezterm" },
-    { "kitty", "kitty" },
-    { "alacritty", "alacritty" },
-}
+-- termmenu = {
+--     { "st", "st" },
+--     { "wezterm", "wezterm" },
+--     { "kitty", "kitty" },
+--     { "alacritty", "alacritty" },
+-- }
 
-multimediamenu = {
-    { "netease-cloud-music", "netease-cloud-music" },
-    { "yesplaymusic", "yesplaymusic" },
-    { "spotify", "spotify" },
-    { "ncmpcpp", "alacritty --class music -e ncmpcpp" },
-    { "vlc", "vlc" },
-    { "pulseaudio", "pavucontrol" },
-}
+-- multimediamenu = {
+--     { "netease-cloud-music", "netease-cloud-music" },
+--     { "yesplaymusic", "yesplaymusic" },
+--     { "spotify", "spotify" },
+--     { "ncmpcpp", "alacritty --class music -e ncmpcpp" },
+--     { "vlc", "vlc" },
+--     { "pulseaudio", "pavucontrol" },
+-- }
 
-settingsmenu = {
-    { "lxappearance", "lxappearance" },
-    { "wallpaper settings", "nitrogen" },
-    { "qt5 settings", "qt5ct" },
-}
+-- settingsmenu = {
+--     { "lxappearance", "lxappearance" },
+--     { "wallpaper settings", "nitrogen" },
+--     { "qt5 settings", "qt5ct" },
+-- }
 
-utilsmenu = {
-    { "screenshot", "flameshot gui" },
-    { "screenkey", "screenkey" },
-}
+-- utilsmenu = {
+--     { "screenshot", "flameshot gui" },
+--     { "screenkey", "screenkey" },
+-- }
 
-myexitmenu = {
-    {
-        "logout",
-        function()
-            awesome.quit()
-        end,
-    },
-    { "reboot", "sudo systemctl reboot" },
-    { "suspend", "sudo systemctl suspend" },
-    { "shutdown", "sudo systemctl poweroff" },
-}
+-- myexitmenu = {
+--     {
+--         "logout",
+--         function()
+--             awesome.quit()
+--         end,
+--     },
+--     { "reboot", "sudo systemctl reboot" },
+--     { "suspend", "sudo systemctl suspend" },
+--     { "shutdown", "sudo systemctl poweroff" },
+-- }
 
 mymainmenu = awful.menu({ items = {
-    { "awesome", myawesomemenu, beautiful.awesome_icon },
-    { "editors", editormenu },
-    { "terms", termmenu },
-    { "network", networkmenu },
-    { "office", officemenu },
-    { "multimedia", multimediamenu },
-    { "settings", settingsmenu },
-    { "utils", utilsmenu },
-    { "exit options", myexitmenu },
+    -- { "awesome", myawesomemenu, beautiful.awesome_icon },
+    -- { "editors", editormenu },
+    -- { "terms", termmenu },
+    -- { "network", networkmenu },
+    -- { "office", officemenu },
+    -- { "multimedia", multimediamenu },
+    -- { "settings", settingsmenu },
+    -- { "utils", utilsmenu },
+    -- { "exit options", myexitmenu },
 }
 })
 
@@ -279,7 +279,7 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            -- mylauncher,
             s.mytaglist,
             s.mypromptbox,
         },
@@ -289,7 +289,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             mytextclock,
             wibox.widget.systray(),
-            s.mylayoutbox,
+            -- s.mylayoutbox,
         },
     }
 end)
@@ -326,8 +326,8 @@ globalkeys = gears.table.join(
         end,
         { description = "focus previous by index", group = "client" }
     ),
-    awful.key({ modkey, }, "w", function() mymainmenu:show() end,
-        { description = "show main menu", group = "awesome" }),
+    -- awful.key({ modkey, }, "w", function() mymainmenu:show() end,
+    --     { description = "show main menu", group = "awesome" }),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift" }, "j", function() awful.client.swap.byidx(1) end,
@@ -387,29 +387,31 @@ globalkeys = gears.table.join(
         { description = "restore minimized", group = "client" }),
 
     -- Prompt
-    awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-        { description = "run prompt", group = "launcher" }),
+    -- awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
+    --     { description = "run prompt", group = "launcher" }),
 
-    awful.key({ modkey }, "x",
-        function()
-            awful.prompt.run {
-                prompt       = "Run Lua code: ",
-                textbox      = awful.screen.focused().mypromptbox.widget,
-                exe_callback = awful.util.eval,
-                history_path = awful.util.get_cache_dir() .. "/history_eval"
-            }
-        end,
-        { description = "lua execute prompt", group = "awesome" }),
+    -- awful.key({ modkey }, "x",
+    --     function()
+    --         awful.prompt.run {
+    --             prompt       = "Run Lua code: ",
+    --             textbox      = awful.screen.focused().mypromptbox.widget,
+    --             exe_callback = awful.util.eval,
+    --             history_path = awful.util.get_cache_dir() .. "/history_eval"
+    --         }
+    --     end,
+    --     { description = "lua execute prompt", group = "awesome" }),
 
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-        { description = "show the menubar", group = "launcher" }),
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+    --     { description = "show the menubar", group = "launcher" }),
 
     -- Custom cmd
     awful.key({ modkey, }, "d", function() awful.spawn(rofi_launcher) end,
         { description = "rofi launcher", group = "launcher" }),
     awful.key({ modkey, "Shift" }, "f", function() awful.spawn(flameshot_gui) end,
-        { description = "flameshot", group = "launcher" })
+        { description = "flameshot", group = "launcher" }),
+    awful.key({ modkey, }, "p", function() awful.spawn("variety -n") end,
+        { description = "variety next wallpaper", group = "launcher" })
 )
 
 clientkeys = gears.table.join(
@@ -423,7 +425,7 @@ clientkeys = gears.table.join(
         { description = "close", group = "client" }),
     awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
         { description = "toggle floating", group = "client" }),
-    awful.key({ modkey, "Control" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
+    awful.key({ modkey, "Shift" }, "Return", function(c) c:swap(awful.client.getmaster()) end,
         { description = "move to master", group = "client" }),
     awful.key({ modkey, }, "o", function(c) c:move_to_screen() end,
         { description = "move to screen", group = "client" }),
