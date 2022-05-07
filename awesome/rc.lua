@@ -159,18 +159,18 @@ awful.layout.layouts = {
 --     { "shutdown", "sudo systemctl poweroff" },
 -- }
 
--- mymainmenu = awful.menu({ items = {
---     { "awesome", myawesomemenu, beautiful.awesome_icon },
---     { "editors", editormenu },
---     { "terms", termmenu },
---     { "network", networkmenu },
---     { "office", officemenu },
---     { "multimedia", multimediamenu },
---     { "settings", settingsmenu },
---     { "utils", utilsmenu },
---     { "exit options", myexitmenu },
--- }
--- })
+mymainmenu = awful.menu({ items = {
+    -- { "awesome", myawesomemenu, beautiful.awesome_icon },
+    -- { "editors", editormenu },
+    -- { "terms", termmenu },
+    -- { "network", networkmenu },
+    -- { "office", officemenu },
+    -- { "multimedia", multimediamenu },
+    -- { "settings", settingsmenu },
+    -- { "utils", utilsmenu },
+    -- { "exit options", myexitmenu },
+}
+})
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
     menu = mymainmenu })
@@ -424,7 +424,11 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "f", function() awful.spawn(flameshot_gui) end,
         { description = "flameshot", group = "launcher" }),
     awful.key({ modkey, }, "p", function() awful.spawn("variety -n") end,
-        { description = "variety next wallpaper", group = "launcher" })
+        { description = "variety next wallpaper", group = "launcher" }),
+    awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
+        { description = "pcmanfm", group = "launcher" }),
+    awful.key({ "Mod4", }, "l", function() awful.spawn("blurlock") end,
+        { description = "lock screen", group = "launcher" })
 )
 
 clientkeys = gears.table.join(
