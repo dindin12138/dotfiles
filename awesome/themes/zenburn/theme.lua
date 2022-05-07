@@ -14,20 +14,22 @@ local theme = {}
 -- {{{ Styles
 theme.font = "Fira Code Nerd Font 10"
 theme.taglist_font = "Fira Code Nerd Font 12"
+theme.tasklist_font = "Fira Code Nerd Font 11"
 
 -- {{{ Colors
-theme.fg_normal  = "#ffffff"
-theme.fg_focus   = "#ffffff"
-theme.fg_urgent  = "#80FFF9"
-theme.bg_normal  = "#00000099"
-theme.bg_focus   = "#00000099"
-theme.bg_urgent  = "#222D31AA"
-theme.bg_systray = "#00000099"
+theme.fg_normal = "#ffffff"
+theme.fg_focus  = "#ffffff"
+theme.fg_urgent = "#80FFF9"
+theme.bg_normal = "#00000099"
+theme.bg_focus  = "#222D3199"
+theme.bg_urgent = "#595B5B99"
+
 -- }}}
 
 -- {{{ Borders
-theme.useless_gap   = dpi(3)
-theme.border_width  = dpi(1)
+theme.useless_gap  = dpi(3)
+theme.border_width = dpi(1)
+
 theme.border_normal = "#000000"
 theme.border_focus  = "#268BD2"
 theme.border_marked = "#CC9393"
@@ -36,6 +38,11 @@ theme.border_marked = "#CC9393"
 -- {{{ Titlebars
 theme.titlebar_bg_focus  = "#00000099"
 theme.titlebar_bg_normal = "#00000099"
+-- }}}
+
+-- {{{ Systray
+theme.bg_systray = "#00000099"
+theme.systray_icon_spacing = 2
 -- }}}
 
 -- There are other variable sets
@@ -74,8 +81,8 @@ theme.menu_width  = dpi(100)
 
 -- {{{ Icons
 -- {{{ Taglist
-theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
-theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
+-- theme.taglist_squares_sel   = themes_path .. "zenburn/taglist/squarefz.png"
+-- theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 --theme.taglist_squares_resize = "false"
 -- }}}
 

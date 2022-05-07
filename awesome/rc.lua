@@ -66,7 +66,8 @@ modkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.tile,
+    -- awful.layout.suit.spiral.dwindle,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.fair,
     -- awful.layout.suit.max,
@@ -158,18 +159,18 @@ awful.layout.layouts = {
 --     { "shutdown", "sudo systemctl poweroff" },
 -- }
 
-mymainmenu = awful.menu({ items = {
-    -- { "awesome", myawesomemenu, beautiful.awesome_icon },
-    -- { "editors", editormenu },
-    -- { "terms", termmenu },
-    -- { "network", networkmenu },
-    -- { "office", officemenu },
-    -- { "multimedia", multimediamenu },
-    -- { "settings", settingsmenu },
-    -- { "utils", utilsmenu },
-    -- { "exit options", myexitmenu },
-}
-})
+-- mymainmenu = awful.menu({ items = {
+--     { "awesome", myawesomemenu, beautiful.awesome_icon },
+--     { "editors", editormenu },
+--     { "terms", termmenu },
+--     { "network", networkmenu },
+--     { "office", officemenu },
+--     { "multimedia", multimediamenu },
+--     { "settings", settingsmenu },
+--     { "utils", utilsmenu },
+--     { "exit options", myexitmenu },
+-- }
+-- })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
     menu = mymainmenu })
@@ -183,7 +184,17 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+-- mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget {
+    font = "Fira Code Nerd Font 11",
+    format = " %A %B %d | %H:%M ",
+    widget = wibox.widget.textclock
+}
+
+mysystray = wibox.widget {
+    opacity = 0.5,
+    widget = wibox.widget.systray
+}
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -260,7 +271,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
         screen  = s,
-        filter  = awful.widget.taglist.filter.all,
+        -- filter  = awful.widget.taglist.filter.all,
+        filter  = awful.widget.taglist.filter.noempty,
         buttons = taglist_buttons
     }
 
@@ -281,14 +293,15 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- mylauncher,
             s.mytaglist,
-            s.mypromptbox,
+            -- s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            -- mykeyboardlayout,
             mytextclock,
-            wibox.widget.systray(),
+            -- wibox.widget.systray(),
+            mysystray,
             -- s.mylayoutbox,
         },
     }
