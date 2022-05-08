@@ -41,7 +41,7 @@ theme.titlebar_bg_normal = "#00000099"
 -- }}}
 
 -- {{{ Systray
-theme.bg_systray = "#00000099"
+theme.bg_systray = "#000000"
 theme.systray_icon_spacing = 2
 -- }}}
 
