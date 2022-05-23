@@ -20,9 +20,9 @@ theme.tasklist_font = "Fira Code Nerd Font 11"
 theme.fg_normal = "#ffffff"
 theme.fg_focus  = "#ffffff"
 theme.fg_urgent = "#80FFF9"
-theme.bg_normal = "#00000099"
-theme.bg_focus  = "#222D3199"
-theme.bg_urgent = "#595B5B99"
+theme.bg_normal = "#000000"
+theme.bg_focus  = "#222D31"
+theme.bg_urgent = "#595B5B"
 
 -- }}}
 
@@ -36,13 +36,13 @@ theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#00000099"
-theme.titlebar_bg_normal = "#00000099"
+-- theme.titlebar_bg_focus  = "#268BD2"
+-- theme.titlebar_bg_normal = "#268BD2"
 -- }}}
 
 -- {{{ Systray
 theme.bg_systray = "#000000"
-theme.systray_icon_spacing = 2
+theme.systray_icon_spacing = 1
 -- }}}
 
 -- There are other variable sets
@@ -75,7 +75,7 @@ theme.mouse_finder_color = "#CC9393"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = dpi(15)
+theme.menu_height = dpi(12)
 theme.menu_width  = dpi(100)
 -- }}}
 

@@ -18,4 +18,4 @@ run variety
 run kdeconnect-indicator
 run qv2ray
 run nutstore
-run ~/.config/polybar/start.sh
+# run ~/.config/polybar/start.sh
