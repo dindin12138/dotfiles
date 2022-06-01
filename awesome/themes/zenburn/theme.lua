@@ -16,34 +16,38 @@ theme.font = "Fira Code Nerd Font 10"
 theme.taglist_font = "Fira Code Nerd Font 12"
 theme.tasklist_font = "Fira Code Nerd Font 11"
 
--- {{{ Colors
-theme.fg_normal = "#ffffff"
-theme.fg_focus  = "#ffffff"
-theme.fg_urgent = "#80FFF9"
-theme.bg_normal = "#000000"
-theme.bg_focus  = "#222D31"
-theme.bg_urgent = "#595B5B"
-
--- }}}
-
 -- {{{ Borders
 theme.useless_gap  = dpi(3)
 theme.border_width = dpi(1)
 
-theme.border_normal = "#000000"
-theme.border_focus  = "#268BD2"
-theme.border_marked = "#CC9393"
--- }}}
+-- {{{ Colors
+theme.black = "#1e1e28"
+theme.deep_black = "#1b1923"
+theme.white = "#d7dae0"
+theme.light_white = "#fafafa"
+theme.pink = "#f0afe1"
+theme.red = "#e28c8c"
+theme.orange = "#f9c096"
+theme.yellow = "#eadda0"
+theme.green = "#b3e1a3"
+theme.blue = "#a4b9ef"
+theme.purple = "#c6aae8"
+theme.grey = "#6e6c7c"
 
--- {{{ Titlebars
--- theme.titlebar_bg_focus  = "#268BD2"
--- theme.titlebar_bg_normal = "#268BD2"
--- }}}
+theme.bg_normal = theme.black
+theme.bg_focus = theme.deep_black
+theme.bg_urgent = theme.white
+theme.bg_minimize = theme.grey
+theme.bg_systray = theme.black
 
--- {{{ Systray
-theme.bg_systray = "#000000"
-theme.systray_icon_spacing = 1
--- }}}
+theme.fg_normal = theme.white
+theme.fg_focus = theme.blue
+theme.fg_urgent = theme.red
+theme.fg_minimize = theme.light_white
+
+theme.border_normal = theme.green
+theme.border_focus = theme.blue
+theme.border_marked = theme.purple
 
 -- There are other variable sets
 -- overriding the default one when
