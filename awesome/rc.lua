@@ -125,7 +125,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mytextclock = wibox.widget.textclock()
 mytextclock = wibox.widget {
     font = "Fira Code Nerd Font 12",
-    format = " %A %B %d | %H:%M ",
+    format = " %Y/%m/%d | %H:%M ",
     widget = wibox.widget.textclock
 }
 mysystray = wibox.widget {
