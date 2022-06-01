@@ -53,9 +53,13 @@ beautiful.init(theme_dir .. "zenburn/theme.lua")
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
+
 -- Custom
 rofi_launcher = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/colorblocks/launcher.rasi"
 flameshot_gui = "flameshot gui"
+
+-- Application Starts
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -101,74 +105,8 @@ awful.layout.layouts = {
 --     { "quit", function() awesome.quit() end },
 -- }
 
--- editormenu = {
---     { "neovim", terminal .. "-e nvim" },
---     { "helix", "kitty -e helix" },
---     { "vscode", "code" },
--- }
-
--- officemenu = {
---     { "files", "nautilus" },
---     { "Word", "wps" },
---     { "Excel", "et" },
---     { "Power Point", "wpp" },
--- }
-
--- networkmenu = {
---     { "chrome", "google-chrome-stable" },
---     { "firefox", "firefox" },
---     { "nm-editor", "nm-connection-editor" },
--- }
-
--- termmenu = {
---     { "st", "st" },
---     { "wezterm", "wezterm" },
---     { "kitty", "kitty" },
---     { "alacritty", "alacritty" },
--- }
-
--- multimediamenu = {
---     { "netease-cloud-music", "netease-cloud-music" },
---     { "yesplaymusic", "yesplaymusic" },
---     { "spotify", "spotify" },
---     { "ncmpcpp", "alacritty --class music -e ncmpcpp" },
---     { "vlc", "vlc" },
---     { "pulseaudio", "pavucontrol" },
--- }
-
--- settingsmenu = {
---     { "lxappearance", "lxappearance" },
---     { "wallpaper settings", "nitrogen" },
---     { "qt5 settings", "qt5ct" },
--- }
-
--- utilsmenu = {
---     { "screenshot", "flameshot gui" },
---     { "screenkey", "screenkey" },
--- }
-
--- myexitmenu = {
---     {
---         "logout",
---         function()
---             awesome.quit()
---         end,
---     },
---     { "reboot", "sudo systemctl reboot" },
---     { "suspend", "sudo systemctl suspend" },
---     { "shutdown", "sudo systemctl poweroff" },
--- }
-
 mymainmenu = awful.menu({ items = {
     -- { "awesome", myawesomemenu, beautiful.awesome_icon },
-    -- { "editors", editormenu },
-    -- { "terms", termmenu },
-    -- { "network", networkmenu },
-    -- { "office", officemenu },
-    -- { "multimedia", multimediamenu },
-    -- { "settings", settingsmenu },
-    -- { "utils", utilsmenu },
-    -- { "exit options", myexitmenu },
 }
 })
 
@@ -186,13 +124,11 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 mytextclock = wibox.widget {
-    font = "Fira Code Nerd Font 11",
+    font = "Fira Code Nerd Font 12",
     format = " %A %B %d | %H:%M ",
     widget = wibox.widget.textclock
 }
-
 mysystray = wibox.widget {
-    opacity = 0.5,
     widget = wibox.widget.systray
 }
 
@@ -665,7 +601,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
---{{{ Application Starts
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
---}}}
