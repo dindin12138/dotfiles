@@ -14,7 +14,7 @@ local theme = {}
 -- {{{ Styles
 theme.font = "Fira Code Nerd Font 10"
 theme.taglist_font = "Fira Code Nerd Font 12"
-theme.tasklist_font = "Fira Code Nerd Font 11"
+theme.tasklist_font = "Fira Code Nerd Font 12"
 
 -- {{{ Borders
 theme.useless_gap  = dpi(3)
@@ -48,32 +48,6 @@ theme.fg_minimize = theme.light_white
 theme.border_normal = theme.green
 theme.border_focus = theme.blue
 theme.border_marked = theme.purple
-
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- [taglist|tasklist]_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- titlebar_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- Example:
---theme.taglist_bg_focus = "#CC9393"
--- }}}
-
--- {{{ Widgets
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.fg_widget        = "#AECF96"
---theme.fg_center_widget = "#88A175"
---theme.fg_end_widget    = "#FF5656"
---theme.bg_widget        = "#494B4F"
---theme.border_widget    = "#3F3F3F"
--- }}}
-
--- {{{ Mouse finder
-theme.mouse_finder_color = "#CC9393"
--- mouse_finder_[timeout|animate_timeout|radius|factor]
--- }}}
 
 -- {{{ Menu
 -- Variables set for theming the menu:
