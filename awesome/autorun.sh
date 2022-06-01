@@ -16,6 +16,6 @@ run pamac-tray
 run fcitx5
 run variety
 run kdeconnect-indicator
-run qv2ray
+run cfw
 run nutstore
 # run ~/.config/polybar/start.sh
