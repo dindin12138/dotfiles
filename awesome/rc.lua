@@ -362,7 +362,7 @@ globalkeys = gears.table.join(
         { description = "variety next wallpaper", group = "launcher" }),
     awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
         { description = "pcmanfm", group = "launcher" }),
-    awful.key({ "Mod4", }, "l", function() awful.spawn("blurlock") end,
+    awful.key({ "Mod4", }, "l", function() awful.spawn("i3lock-fancy") end,
         { description = "lock screen", group = "launcher" })
 )
 
