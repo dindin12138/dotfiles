@@ -47,7 +47,7 @@ end
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 theme_dir = "~/.config/awesome/themes/"
-beautiful.init(theme_dir .. "zenburn/theme.lua")
+beautiful.init(theme_dir .. "cesious/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -71,11 +71,8 @@ modkey = "Mod1"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    -- awful.layout.suit.spiral.dwindle,
-    -- awful.layout.suit.tile.bottom,
-    -- awful.layout.suit.fair,
-    -- awful.layout.suit.max,
-    -- awful.layout.suit.floating,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.floating,
     -- awful.layout.suit.floating,
     -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
@@ -128,9 +125,8 @@ mytextclock = wibox.widget {
     format = " %Y/%m/%d | %H:%M ",
     widget = wibox.widget.textclock
 }
-mysystray = wibox.widget {
-    widget = wibox.widget.systray
-}
+
+seperator = wibox.widget.textbox(' <span color="' .. "#9EBABA" .. '">| </span>')
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -192,7 +188,8 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }, s, awful.layout.layouts[1])
+    awful.tag({ "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }, s,
+        awful.layout.layouts[1])
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
@@ -228,18 +225,20 @@ awful.screen.connect_for_each_screen(function(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
-            -- mylauncher,
+            mylauncher,
             s.mytaglist,
             -- s.mypromptbox,
+            seperator,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
+            seperator,
             mytextclock,
-            -- wibox.widget.systray(),
-            mysystray,
-            -- s.mylayoutbox,
+            seperator,
+            wibox.widget.systray(),
+            s.mylayoutbox,
         },
     }
 end)
