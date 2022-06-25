@@ -18,6 +18,9 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -236,6 +239,14 @@ awful.screen.connect_for_each_screen(function(s)
             seperator,
             mytextclock,
             seperator,
+            battery_widget({
+                font = "Fira Code Nerd Font 12"
+            }),
+            seperator,
+            volume_widget {
+                device = 'default'
+            },
+            seperator,
             wibox.widget.systray(),
             s.mylayoutbox,
         },
@@ -363,7 +374,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
         { description = "pcmanfm", group = "launcher" }),
     awful.key({ "Mod4", }, "l", function() awful.spawn("i3lock-fancy") end,
-        { description = "lock screen", group = "launcher" })
+        { description = "lock screen", group = "launcher" }),
+    awful.key({ modkey }, "]", function() volume_widget:inc(5) end),
+    awful.key({ modkey }, "[", function() volume_widget:dec(5) end),
+    awful.key({ modkey }, "\\", function() volume_widget:toggle() end)
 )
 
 clientkeys = gears.table.join(
@@ -512,7 +526,8 @@ awful.rules.rules = {
             "Wpa_gui",
             "veromix",
             "xtightvncviewer",
-            "Polkit-gnome-authentication-agent-1"
+            "Polkit-gnome-authentication-agent-1",
+            "flameshot"
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client

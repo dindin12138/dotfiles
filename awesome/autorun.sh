@@ -8,7 +8,7 @@ function run {
 }
 
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-run volumeicon
+# run volumeicon
 run picom -b
 run nm-applet
 run xfce4-power-manager
