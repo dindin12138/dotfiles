@@ -386,7 +386,17 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "[", function() volume_widget:dec(5) end,
         { description = "volume low", group = "widget" }),
     awful.key({ modkey }, "\\", function() volume_widget:toggle() end,
-        { description = "volume mute", group = "widget" })
+        { description = "volume mute", group = "widget" }),
+    awful.key({}, "XF86MonBrightnessUp", function() os.execute("xbacklight -inc 5") end,
+        { description = "+5%", group = "widget" }),
+    awful.key({}, "XF86MonBrightnessDown", function() os.execute("xbacklight -dec 5") end,
+        { description = "-5%", group = "widget" }),
+    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("amixer set Master 5%+") end,
+        { description = "volume up", group = "widget" }),
+    awful.key({}, "XF86AudioLowerVolume", function() os.execute("amixer set Master 5%-") end,
+        { description = "volume down", group = "widget" }),
+    awful.key({}, "XF86AudioMute", function() os.execute("amixer -q set Master toggle") end,
+        { description = "toggle mute", group = "widget" })
 )
 
 clientkeys = gears.table.join(
