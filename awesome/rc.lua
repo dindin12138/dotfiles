@@ -129,7 +129,8 @@ mytextclock = wibox.widget {
     widget = wibox.widget.textclock()
 }
 
-seperator = wibox.widget.textbox(' <span color="' .. "#9EBABA" .. '">| </span>')
+right_seperator = wibox.widget.textbox(' <span color="' .. "#9EBABA" .. '"> </span>')
+left_seperator = wibox.widget.textbox(' <span color="' .. "#9EBABA" .. '"> </span>')
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -231,28 +232,28 @@ awful.screen.connect_for_each_screen(function(s)
             mylauncher,
             s.mytaglist,
             -- s.mypromptbox,
-            seperator,
+            left_seperator,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
-            seperator,
+            right_seperator,
             net_speed_widget({
                 width = 64,
                 font = "Fira Code Nerd Font 11"
             }),
-            seperator,
+            right_seperator,
             mytextclock,
-            seperator,
+            right_seperator,
             battery_widget({
                 font = "Fira Code Nerd Font 12"
             }),
-            seperator,
+            right_seperator,
             volume_widget {
                 device = 'default'
             },
-            seperator,
+            right_seperator,
             wibox.widget.systray(),
             s.mylayoutbox,
         },
