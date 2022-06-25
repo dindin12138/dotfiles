@@ -17,13 +17,7 @@
 !/pip/
 !/img/
 !/flameshot/
-!/dwm/
-/dwm/dwm
-/dwm/*.o
-/dwm/*.orig
-!/slstatus/
-/slstatus/slstatus
-/slstatus/*.o
 !/libinput-gestures.conf
+!/scripts/
 !/.gitignore
 !/.README.md
