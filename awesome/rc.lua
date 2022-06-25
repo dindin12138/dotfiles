@@ -393,15 +393,15 @@ globalkeys = gears.table.join(
         { description = "volume low", group = "widget" }),
     awful.key({ modkey }, "\\", function() volume_widget:toggle() end,
         { description = "volume mute", group = "widget" }),
-    awful.key({}, "XF86MonBrightnessUp", function() os.execute("xbacklight -inc 5") end,
+    awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("light -A 5") end,
         { description = "+5%", group = "widget" }),
-    awful.key({}, "XF86MonBrightnessDown", function() os.execute("xbacklight -dec 5") end,
+    awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("light -U 5") end,
         { description = "-5%", group = "widget" }),
-    awful.key({}, "XF86AudioRaiseVolume", function() os.execute("amixer set Master 5%+") end,
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("amixer set Master 5%+") end,
         { description = "volume up", group = "widget" }),
-    awful.key({}, "XF86AudioLowerVolume", function() os.execute("amixer set Master 5%-") end,
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("amixer set Master 5%-") end,
         { description = "volume down", group = "widget" }),
-    awful.key({}, "XF86AudioMute", function() os.execute("amixer -q set Master toggle") end,
+    awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -q set Master toggle") end,
         { description = "toggle mute", group = "widget" })
 )
 
