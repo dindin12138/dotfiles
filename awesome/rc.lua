@@ -119,11 +119,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
 mytextclock = wibox.widget {
     font = "Fira Code Nerd Font 12",
     format = " %Y/%m/%d | %H:%M ",
-    widget = wibox.widget.textclock
+    widget = wibox.widget.textclock()
 }
 
 seperator = wibox.widget.textbox(' <span color="' .. "#9EBABA" .. '">| </span>')
@@ -205,8 +204,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
         screen  = s,
-        -- filter  = awful.widget.taglist.filter.all,
-        filter  = awful.widget.taglist.filter.noempty,
+        filter  = awful.widget.taglist.filter.all,
+        -- filter  = awful.widget.taglist.filter.noempty,
         buttons = taglist_buttons
     }
 
@@ -512,12 +511,15 @@ awful.rules.rules = {
             "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
             "Wpa_gui",
             "veromix",
-            "xtightvncviewer" },
+            "xtightvncviewer",
+            "Polkit-gnome-authentication-agent-1"
+        },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
         name = {
             "Event Tester", -- xev.
+            "License Info", -- Typora License Info
         },
         role = {
             "AlarmWindow", -- Thunderbird's calendar.
