@@ -239,7 +239,7 @@ awful.screen.connect_for_each_screen(function(s)
             -- mykeyboardlayout,
             seperator,
             net_speed_widget({
-                width = 70,
+                width = 64,
                 font = "Fira Code Nerd Font 11"
             }),
             seperator,
