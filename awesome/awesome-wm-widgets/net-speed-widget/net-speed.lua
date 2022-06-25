@@ -20,21 +20,21 @@ local net_speed_widget = {}
 local function convert_to_h(bytes)
     local speed
     local dim
-    local bits = bytes * 8
-    if bits < 1000 then
-        speed = bits
+    -- local bits = bytes * 8
+    if bytes < 1000 then
+        speed = bytes
         dim = 'B/s'
-    elseif bits < 1000000 then
-        speed = bits / 1000
+    elseif bytes < 1000000 then
+        speed = bytes / 1000
         dim = 'KB/s'
-    elseif bits < 1000000000 then
-        speed = bits / 1000000
+    elseif bytes < 1000000000 then
+        speed = bytes / 1000000
         dim = 'MB/s'
-    elseif bits < 1000000000000 then
-        speed = bits / 1000000000
+    elseif bytes < 1000000000000 then
+        speed = bytes / 1000000000
         dim = 'GB/s'
     else
-        speed = tonumber(bits)
+        speed = tonumber(bytes)
         dim = 'B/s'
     end
     return math.floor(speed + 0.5) .. dim
