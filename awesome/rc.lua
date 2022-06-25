@@ -53,6 +53,11 @@ end
 theme_dir = "~/.config/awesome/themes/"
 beautiful.init(theme_dir .. "cesious/theme.lua")
 
+beautiful.notification_font = "Fira Code Nerd Font 12"
+beautiful.notification_border_width = 1
+beautiful.notification_border_color = "#16A085"
+beautiful.notification_shape = gears.shape.rounded_rect
+
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nvim"
