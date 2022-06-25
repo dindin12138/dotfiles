@@ -558,8 +558,17 @@ awful.rules.rules = {
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    -- { "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }
+    { rule = { class = "Microsoft-edge" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "Typora" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "obsidian" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "Code" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "vlc" },
+        properties = { screen = 1, tag = " 辶 " } },
 }
 -- }}}
 
