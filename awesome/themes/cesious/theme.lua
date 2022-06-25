@@ -8,7 +8,7 @@ theme.dir = "~/.config/awesome/themes/cesious"
 
 theme.font = "Fira Code Nerd Font 10"
 theme.taglist_font = "Fira Code Nerd Font 12"
-theme.tasklist_font = "Fira Code Nerd Font 12"
+theme.tasklist_font = "Fira Code Nerd Font 11"
 
 theme.bg_normal   = "#222D32"
 theme.bg_focus    = "#2C3940"
