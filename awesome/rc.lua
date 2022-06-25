@@ -20,6 +20,7 @@ require("awful.hotkeys_popup.keys")
 
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -124,7 +125,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Create a textclock widget
 mytextclock = wibox.widget {
     font = "Fira Code Nerd Font 12",
-    format = " %Y/%m/%d | %H:%M ",
+    format = " %Y/%m/%d %H:%M ",
     widget = wibox.widget.textclock()
 }
 
@@ -236,6 +237,11 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             -- mykeyboardlayout,
+            seperator,
+            net_speed_widget({
+                width = 70,
+                font = "Fira Code Nerd Font 11"
+            }),
             seperator,
             mytextclock,
             seperator,
@@ -375,9 +381,12 @@ globalkeys = gears.table.join(
         { description = "pcmanfm", group = "launcher" }),
     awful.key({ "Mod4", }, "l", function() awful.spawn("i3lock-fancy") end,
         { description = "lock screen", group = "launcher" }),
-    awful.key({ modkey }, "]", function() volume_widget:inc(5) end),
-    awful.key({ modkey }, "[", function() volume_widget:dec(5) end),
-    awful.key({ modkey }, "\\", function() volume_widget:toggle() end)
+    awful.key({ modkey }, "]", function() volume_widget:inc(5) end,
+        { description = "volume raise", group = "widget" }),
+    awful.key({ modkey }, "[", function() volume_widget:dec(5) end,
+        { description = "volume low", group = "widget" }),
+    awful.key({ modkey }, "\\", function() volume_widget:toggle() end,
+        { description = "volume mute", group = "widget" })
 )
 
 clientkeys = gears.table.join(
