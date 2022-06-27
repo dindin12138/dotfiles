@@ -6,7 +6,7 @@
 theme = {}
 theme.dir = "~/.config/awesome/themes/default"
 
-theme.wallpaper = theme.dir .. "/City-of-Water-and-Light.jpg"
+theme.wallpaper = theme.dir .. "/wallpaper.jpg"
 theme.awesome_icon = theme.dir .. "/icons/arch65.png"
 
 theme.font = "Fira Code Nerd Font 10"
@@ -27,8 +27,8 @@ theme.fg_minimize = "#ffffff"
 
 theme.border_width  = 1
 theme.border_normal = "#000000"
-theme.border_focus  = "#16A085"
-theme.border_marked = "#16A085"
+theme.border_focus  = "#a4b9ef"
+theme.border_marked = "#a4b9ef"
 
 theme.useless_gap = 3
 theme.master_width_factor = 0.55
