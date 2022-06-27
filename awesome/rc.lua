@@ -479,6 +479,9 @@ for i = 1, 9 do
                     local tag = client.focus.screen.tags[i]
                     if tag then
                         client.focus:move_to_tag(tag)
+                        local screen = awful.screen.focused()
+                        local tag2 = screen.tags[i]
+                        tag2:view_only()
                     end
                 end
             end,
