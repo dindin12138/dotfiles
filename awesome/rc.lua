@@ -383,7 +383,7 @@ globalkeys = gears.table.join(
         { description = "variety next wallpaper", group = "launcher" }),
     awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
         { description = "pcmanfm", group = "launcher" }),
-    awful.key({ "Mod4", }, "l", function() os.execute("~/.config/scripts/lock.sh") end,
+    awful.key({ "Mod4", }, "l", function() awful.spawn.with_shell("~/.config/scripts/lock.sh") end,
         { description = "lock screen", group = "launcher" }),
     awful.key({ modkey }, "]", function() volume_widget:inc(5) end,
         { description = "volume raise", group = "widget" }),
