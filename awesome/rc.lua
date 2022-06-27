@@ -54,7 +54,7 @@ theme_dir = "~/.config/awesome/themes/"
 beautiful.init(theme_dir .. "cesious/theme.lua")
 
 beautiful.notification_font = "Fira Code Nerd Font 12"
-beautiful.notification_border_width = 1
+beautiful.master_width_factor = 0.55
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
