@@ -4,11 +4,15 @@
 --]]
 
 theme = {}
-theme.dir = "~/.config/awesome/themes/cesious"
+theme.dir = "~/.config/awesome/themes/default"
+
+theme.wallpaper = theme.dir .. "/City-of-Water-and-Light.jpg"
+theme.awesome_icon = theme.dir .. "/icons/arch65.png"
 
 theme.font = "Fira Code Nerd Font 10"
 theme.taglist_font = "Fira Code Nerd Font 12"
 theme.tasklist_font = "Fira Code Nerd Font 11"
+theme.notification_font = "Fira Code Nerd Font 12"
 
 theme.bg_normal   = "#222D32"
 theme.bg_focus    = "#2C3940"
@@ -27,6 +31,7 @@ theme.border_focus  = "#16A085"
 theme.border_marked = "#16A085"
 
 theme.useless_gap = 3
+theme.master_width_factor = 0.55
 
 -- There are other variable sets
 -- overriding the default one when
@@ -78,8 +83,6 @@ theme.titlebar_maximized_button_focus_inactive  = theme.dir .. "/titlebar/maximi
 theme.titlebar_maximized_button_normal_active   = theme.dir .. "/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active    = theme.dir .. "/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = theme.dir .. "/City-of-Water-and-Light.jpg"
-
 -- You can use your own layout icons like this:
 theme.layout_fairh      = theme.dir .. "/layouts/fairh.png"
 theme.layout_fairv      = theme.dir .. "/layouts/fairv.png"
@@ -93,8 +96,6 @@ theme.layout_tile       = theme.dir .. "/layouts/tile.png"
 theme.layout_tiletop    = theme.dir .. "/layouts/tiletop.png"
 theme.layout_spiral     = theme.dir .. "/layouts/spiral.png"
 theme.layout_dwindle    = theme.dir .. "/layouts/dwindle.png"
-
-theme.awesome_icon = theme.dir .. "/icons/manjaro48.png"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
