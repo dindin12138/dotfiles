@@ -50,11 +50,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-theme_dir = "~/.config/awesome/themes/"
-beautiful.init(theme_dir .. "cesious/theme.lua")
-
-beautiful.notification_font = "Fira Code Nerd Font 12"
-beautiful.master_width_factor = 0.55
+beautiful.init("~/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
