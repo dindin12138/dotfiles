@@ -59,7 +59,6 @@ local editor_cmd = terminal .. " -e " .. editor
 
 -- Custom
 local rofi_launcher = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/aesthetic-night.rasi"
-local flameshot_gui = "flameshot gui"
 
 -- Application Starts
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
@@ -296,7 +295,7 @@ local globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey, }, "Return", function() awful.spawn(terminal) end,
-        { description = "open a terminal", group = "launcher" }),
+        { description = "open a terminal", group = "app" }),
     awful.key({ modkey, "Shift" }, "r", awesome.restart,
         { description = "reload awesome", group = "awesome" }),
     awful.key({ modkey, "Shift" }, "x", awesome.quit,
@@ -350,33 +349,39 @@ local globalkeys = gears.table.join(
     -- awful.key({ modkey }, "p", function() menubar.show() end,
     --     { description = "show the menubar", group = "launcher" }),
 
-    -- Custom cmd
+    --- Custom cmd
+    --- App launcher
     awful.key({ modkey, }, "d", function() awful.spawn(rofi_launcher) end,
-        { description = "rofi launcher", group = "launcher" }),
-    awful.key({ modkey, "Shift" }, "f", function() awful.spawn(flameshot_gui) end,
-        { description = "flameshot", group = "launcher" }),
+        { description = "open app launcher", group = "app" }),
     awful.key({ modkey, }, "p", function() awful.spawn("variety -n") end,
-        { description = "variety next wallpaper", group = "launcher" }),
+        { description = "change next wallpaper", group = "hotkeys" }),
     awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
-        { description = "pcmanfm", group = "launcher" }),
-    awful.key({ "Mod4", }, "l", function() awful.spawn.with_shell("~/.config/scripts/lock.sh") end,
-        { description = "lock screen", group = "launcher" }),
-    awful.key({ modkey }, "]", function() volume_widget:inc(5) end,
-        { description = "volume raise", group = "widget" }),
-    awful.key({ modkey }, "[", function() volume_widget:dec(5) end,
-        { description = "volume low", group = "widget" }),
-    awful.key({ modkey }, "\\", function() volume_widget:toggle() end,
-        { description = "volume mute", group = "widget" }),
-    awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("light -A 5") end,
-        { description = "+5%", group = "widget" }),
-    awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("light -U 5") end,
-        { description = "-5%", group = "widget" }),
+        { description = "open file manager", group = "app" }),
+
+    --- Brightness Control
+    awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set 5%+ -q") end,
+        { description = "+5%", group = "hotkeys" }),
+    awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("brightnessctl set 5%- -q") end,
+        { description = "-5%", group = "hotkeys" }),
+    --- Volume control
     awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("amixer set Master 5%+") end,
-        { description = "volume up", group = "widget" }),
+        { description = "volume up", group = "hotkeys" }),
     awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("amixer set Master 5%-") end,
-        { description = "volume down", group = "widget" }),
+        { description = "volume down", group = "hotkeys" }),
     awful.key({}, "XF86AudioMute", function() awful.spawn("amixer -q set Master toggle") end,
-        { description = "toggle mute", group = "widget" })
+        { description = "toggle mute", group = "hotkeys" }),
+    -- Color picker
+    awful.key({ modkey, "Shift" }, "p", function()
+        awful.spawn.easy_async_with_shell("~/.config/scripts/xcolor-pick.sh", function() end)
+    end, { description = "open color picker", group = "hotkeys" }),
+    --- Screenshots
+    awful.key({ modkey, "Shift" }, "f", function() awful.spawn("flameshot gui") end,
+        { description = "take a area screenshot", group = "hotkeys" }),
+    awful.key({}, "Print", function() awful.spawn("flameshot full") end,
+        { description = "take a full screenshot", group = "hotkeys" }),
+    --- Lockscreen
+    awful.key({ "Mod4", }, "l", function() awful.spawn.with_shell("~/.config/scripts/lock.sh") end,
+        { description = "lock screen", group = "hotkeys" })
 )
 
 local clientkeys = gears.table.join(
