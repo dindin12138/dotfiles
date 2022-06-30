@@ -58,7 +58,7 @@ local editor = os.getenv("EDITOR") or "nvim"
 local editor_cmd = terminal .. " -e " .. editor
 
 -- Custom
-local rofi_launcher = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/colorblocks/launcher.rasi"
+local rofi_launcher = "rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/aesthetic-night.rasi"
 local flameshot_gui = "flameshot gui"
 
 -- Application Starts
