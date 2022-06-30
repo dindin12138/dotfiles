@@ -19,7 +19,14 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-@import "colors.rasi"
+* {
+  al:    #ffffff;
+  bg:    #ffffff;
+  bg1:   #B0BEC5;
+  bg2:   #90A4AE;
+  bg3:   #78909C;
+  fg:    #FFFFFF;
+}
 
 window {
     transparency:                   "real";
