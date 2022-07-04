@@ -14,7 +14,7 @@ run nm-applet
 run xfce4-power-manager
 run pamac-tray
 run fcitx5
-run variety
+# run variety
 # run kdeconnect-indicator
 run cfw
 run nutstore
