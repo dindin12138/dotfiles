@@ -16,8 +16,8 @@ theme.notification_font = "Fira Code Nerd Font 12"
 
 theme.bg_normal   = "#222D32"
 theme.bg_focus    = "#2C3940"
-theme.bg_urgent   = "#000000"
-theme.bg_minimize = "#101010"
+theme.bg_urgent   = "#2C3940"
+theme.bg_minimize = "#222D32"
 theme.bg_systray  = theme.bg_normal
 
 theme.fg_normal   = "#ffffff"
