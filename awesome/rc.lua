@@ -537,7 +537,11 @@ awful.rules.rules = {
             "veromix",
             "xtightvncviewer",
             "Polkit-gnome-authentication-agent-1",
-            "flameshot"
+            "flameshot",
+            "Gcr-prompter",
+            "picgo",
+            "Stoken-gui",
+            "Nm-connection-editor"
         },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -550,8 +554,11 @@ awful.rules.rules = {
             "AlarmWindow", -- Thunderbird's calendar.
             "ConfigManager", -- Thunderbird's about:config.
             "pop-up", -- e.g. Google Chrome's (detached) Developer Tools.
+        },
+        type = {
+            "dialog"
         }
-    }, properties = { floating = true } },
+    }, properties = { floating = true, placement = awful.placement.centered } },
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = { type = { "normal", "dialog" }
