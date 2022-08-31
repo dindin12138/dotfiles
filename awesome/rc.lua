@@ -581,6 +581,8 @@ awful.rules.rules = {
         properties = { screen = 1, tag = " 辶 " } },
     { rule = { class = "baidunetdisk" },
         properties = { screen = 1, tag = "  " } },
+    { rule = { class = "qBittorrent" },
+        properties = { screen = 1, tag = "  " } },
     { rule = { class = "netease-cloud-music" },
         properties = { screen = 1, tag = "  " } },
     { rule = { class = "Virt-manager" },
