@@ -103,7 +103,7 @@ local mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon, menu 
 -- Create a textclock widget
 local mytextclock = wibox.widget {
     font = "Fira Code Nerd Font 12",
-    format = " %Y/%m/%d %H:%M ",
+    format = " %Y/%m/%d %H:%M ",
     widget = wibox.widget.textclock()
 }
 
@@ -171,7 +171,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }, s,
+    awful.tag({ "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }, s,
         awful.layout.layouts[1])
     -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
@@ -566,17 +566,29 @@ awful.rules.rules = {
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }
+    -- { "  ", "  ", "  ", "  ", " 辶 ", "  ", "  ", "  ", "  " }
     { rule = { class = "Microsoft-edge" },
         properties = { screen = 1, tag = "  " } },
-    { rule = { class = "Typora" },
-        properties = { screen = 1, tag = "  " } },
-    { rule = { class = "obsidian" },
-        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "Google-chrome" },
+        properties = { screen = 1, tag = "  " } },
     { rule = { class = "Code" },
         properties = { screen = 1, tag = "  " } },
+    { rule = { class = "Typora" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "obsidian" },
+        properties = { screen = 1, tag = "  " } },
     { rule = { class = "vlc" },
         properties = { screen = 1, tag = " 辶 " } },
+    { rule = { class = "baidunetdisk" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "netease-cloud-music" },
+        properties = { screen = 1, tag = "  " } },
+    { rule = { class = "Virt-manager" },
+        properties = { screen = 1, tag = "  " } },
+
+    -- The window will be automatically closed
+    { rule = { name = "License Info" },
+        callback = function(c) c:kill() end },
 }
 -- }}}
 
