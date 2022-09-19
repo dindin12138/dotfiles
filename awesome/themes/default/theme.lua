@@ -6,7 +6,7 @@
 theme = {}
 theme.dir = "~/.config/awesome/themes/default"
 
-theme.wallpaper = theme.dir .. "/wave.jpg"
+theme.wallpaper = theme.dir .. "/Irelia.jpg"
 theme.awesome_icon = theme.dir .. "/icons/arch65.png"
 
 theme.font = "Fira Code Nerd Font 10"
