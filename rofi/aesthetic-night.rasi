@@ -11,10 +11,10 @@ configuration {
 }
 
 * {
-    BG:                             #06111599;
-    BGA:                            #061115;
-    FG:                             #D9D7D6ff;
-    UGT:                            #DF5B61ff;
+    BG:                             #1e1e2e99;
+    BGA:                            #1e1e2e;
+    FG:                             #eff1f5ff;
+    UGT:                            #f38ba8ff;
 }
 
 window {

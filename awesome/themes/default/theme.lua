@@ -14,10 +14,10 @@ theme.taglist_font = "Fira Code Nerd Font 12"
 theme.tasklist_font = "Fira Code Nerd Font 11"
 theme.notification_font = "Fira Code Nerd Font 12"
 
-theme.bg_normal = "#222D32"
-theme.bg_focus = "#2C3940"
-theme.bg_urgent = "#2C3940"
-theme.bg_minimize = "#222D32"
+theme.bg_normal = "#1e1e2e"
+theme.bg_focus = "#313244"
+theme.bg_urgent = "#313244"
+theme.bg_minimize = "#313244"
 theme.bg_systray = theme.bg_normal
 
 theme.fg_normal = "#ffffff"
