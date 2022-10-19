@@ -6,7 +6,7 @@
 theme = {}
 theme.dir = "~/.config/awesome/themes/default"
 
-theme.wallpaper = theme.dir .. "/Irelia.jpg"
+theme.wallpaper = theme.dir .. "/wave.jpg"
 theme.awesome_icon = theme.dir .. "/icons/arch65.png"
 
 theme.font = "Fira Code Nerd Font 10"
@@ -14,21 +14,50 @@ theme.taglist_font = "Fira Code Nerd Font 12"
 theme.tasklist_font = "Fira Code Nerd Font 11"
 theme.notification_font = "Fira Code Nerd Font 12"
 
-theme.bg_normal = "#1e1e2e"
-theme.bg_focus = "#313244"
-theme.bg_urgent = "#313244"
-theme.bg_minimize = "#313244"
-theme.bg_systray = theme.bg_normal
+-- catppuccin mocha
+theme.White = "#ffffff"
+theme.Rosewater = "#f5e0dc"
+theme.Flamingo = "#f2cdcd"
+theme.Pink = "#f5c2e7"
+theme.Mauve = "#cba6f7"
+theme.Red = "#f38ba8"
+theme.Maroon = "#eba0ac"
+theme.Peach = "#fab387"
+theme.Yellow = "#f9e2af"
+theme.Green = "#a6e3a1"
+theme.Teal = "#94e2d5"
+theme.Sky = "#89dceb"
+theme.Sapphire = "#74c7ec"
+theme.Blue = "#89b4fa"
+theme.Lavender = "#b4befe"
+theme.Text = "#cdd6f4"
+theme.Subtext1 = "#bac2de"
+theme.Subtext0 = "#a6adc8"
+theme.Overlay2 = "#9399b2"
+theme.Overlay1 = "#7f849c"
+theme.Overlay0 = "#6c7086"
+theme.Surface2 = "#585b70"
+theme.Surface1 = "#45475a"
+theme.Surface0 = "#313244"
+theme.Base = "#1e1e2e"
+theme.Mantle = "#181825"
+theme.Crust = "#11111b"
 
-theme.fg_normal = "#ffffff"
-theme.fg_focus = "#ffffff"
-theme.fg_urgent = "#a4b9ef"
-theme.fg_minimize = "#ffffff"
+theme.bg_normal = theme.Base
+theme.bg_focus = theme.Surface0
+theme.bg_urgent = theme.Surface0
+theme.bg_minimize = theme.Text
+theme.bg_systray = theme.Base
+
+theme.fg_normal = theme.White
+theme.fg_focus = theme.White
+theme.fg_urgent = theme.Blue
+theme.fg_minimize = theme.White
 
 theme.border_width = 1
-theme.border_normal = "#000000"
-theme.border_focus = "#a4b9ef"
-theme.border_marked = "#a4b9ef"
+theme.border_normal = theme.Base
+theme.border_focus = theme.Blue
+theme.border_marked = theme.Blue
 
 theme.useless_gap = 3
 theme.master_width_factor = 0.55
@@ -84,18 +113,21 @@ theme.titlebar_maximized_button_normal_active = theme.dir .. "/titlebar/maximize
 theme.titlebar_maximized_button_focus_active = theme.dir .. "/titlebar/maximized_focus_active.png"
 
 -- You can use your own layout icons like this:
-theme.layout_fairh = theme.dir .. "/layouts/fairh.png"
-theme.layout_fairv = theme.dir .. "/layouts/fairv.png"
-theme.layout_floating = theme.dir .. "/layouts/floating.png"
-theme.layout_magnifier = theme.dir .. "/layouts/magnifier.png"
-theme.layout_max = theme.dir .. "/layouts/max.png"
-theme.layout_fullscreen = theme.dir .. "/layouts/fullscreen.png"
-theme.layout_tilebottom = theme.dir .. "/layouts/tilebottom.png"
-theme.layout_tileleft = theme.dir .. "/layouts/tileleft.png"
-theme.layout_tile = theme.dir .. "/layouts/tile.png"
-theme.layout_tiletop = theme.dir .. "/layouts/tiletop.png"
-theme.layout_spiral = theme.dir .. "/layouts/spiral.png"
-theme.layout_dwindle = theme.dir .. "/layouts/dwindle.png"
+-- theme.layout_fairh = theme.dir .. "/layouts/white/fairh.png"
+-- theme.layout_fairv = theme.dir .. "/layouts/white/fairv.png"
+-- theme.layout_floating = theme.dir .. "/layouts/white/floating.png"
+-- theme.layout_magnifier = theme.dir .. "/layouts/white/magnifier.png"
+-- theme.layout_max = theme.dir .. "/layouts/white/max.png"
+-- theme.layout_fullscreen = theme.dir .. "/layouts/white/fullscreen.png"
+-- theme.layout_tilebottom = theme.dir .. "/layouts/white/tilebottom.png"
+-- theme.layout_tileleft = theme.dir .. "/layouts/white/tileleft.png"
+-- theme.layout_tile = theme.dir .. "/layouts/white/tile.png"
+-- theme.layout_tiletop = theme.dir .. "/layouts/white/tiletop.png"
+-- theme.layout_spiral = theme.dir .. "/layouts/white/spiral.png"
+-- theme.layout_dwindle = theme.dir .. "/layouts/white/dwindle.png"
+theme.layout_floating = theme.dir .. "/layouts/yoru/floating.png"
+theme.layout_tile = theme.dir .. "/layouts/yoru/tile.png"
+theme.layout_dwindle = theme.dir .. "/layouts/yoru/dwindle.png"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
