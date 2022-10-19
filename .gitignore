@@ -19,5 +19,6 @@
 !/flameshot/
 !/libinput-gestures.conf
 !/scripts/
+!/bat/
 !/.gitignore
 !/.README.md
