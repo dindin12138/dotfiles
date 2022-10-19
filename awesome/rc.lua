@@ -358,7 +358,7 @@ local globalkeys = gears.table.join(
         { description = "open app launcher", group = "app" }),
     awful.key({ modkey, }, "p", function() awful.spawn("variety -n") end,
         { description = "change next wallpaper", group = "hotkeys" }),
-    awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm") end,
+    awful.key({ modkey, }, "e", function() awful.spawn("pcmanfm-qt") end,
         { description = "open file manager", group = "app" }),
 
     --- Brightness Control
