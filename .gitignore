@@ -20,5 +20,6 @@
 !/libinput-gestures.conf
 !/scripts/
 !/bat/
+!/btop/
 !/.gitignore
 !/.README.md
