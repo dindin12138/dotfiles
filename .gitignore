@@ -24,5 +24,6 @@
 !/cava/
 !/waybar/
 !/wofi/
+!/wlogout/
 !/.gitignore
 !/.README.md
