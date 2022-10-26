@@ -22,5 +22,6 @@
 !/bat/
 !/btop/
 !/cava/
+!/waybar/
 !/.gitignore
 !/.README.md
