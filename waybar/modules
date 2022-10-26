@@ -56,7 +56,7 @@
         "format-full": "{icon}  Full",
         //"format-good": "",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": [" ", " ", " ", " ", " "],
         "format-time": "{H}h {M}min",
         "tooltip": true
     },

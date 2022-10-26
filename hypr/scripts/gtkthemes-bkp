@@ -3,7 +3,7 @@
 ## Set GTK Themes, Icons, Cursor and Fonts
 
 THEME='Catppuccin-Mocha'
-ICONS='Papirus-Dark'
+ICONS='Papirus-Light'
 FONT='FiraCode Nerd Font 10'
 CURSOR='Sweet-cursors'
 
