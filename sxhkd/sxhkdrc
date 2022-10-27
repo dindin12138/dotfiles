@@ -74,21 +74,21 @@ alt + shift + f
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	brightness{ --inc, --dec}
+	brightnessctl set {5%+,5%-} -q
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	volume{ --inc, --dec}
+	amixer set Master {5%+,5%-}
 
 XF86AudioMute
-	volume --toggle
+	amixer -q set Master toggle
 
-XF86AudioMicMute
-	volume --toggle-mic
+# XF86AudioMicMute
+# 	volume --toggle-mic
 
 # Music control
-XF86Audio{Next,Prev,Play,Stop}
-	mpc {next,prev,toggle,stop}
+# XF86Audio{Next,Prev,Play,Stop}
+# 	mpc {next,prev,toggle,stop}
 
 ##---------- Bspwm ----------##
 
@@ -151,8 +151,8 @@ alt + {Tab,grave}
 	bspc {node,desktop} -f last
 
 # Send focused window to another workspace
-alt + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
+alt + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}'
 
 # Expanding windows
 alt + control + {Left,Right,Up,Down}
