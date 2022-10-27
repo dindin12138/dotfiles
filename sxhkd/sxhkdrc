@@ -1,0 +1,173 @@
+## Keybindings config for Archcraft's BSPWM
+
+##---------- Keybindings for bspwm ----------##
+
+# Terminal (alacritty)
+alt + Return
+	alacritty
+
+# Terminal (floating)
+# alt + shift + Return
+# 	bspterm --float
+
+# Terminal (fullscreen)
+# super + t
+# 	bspterm --full
+
+##---------- Rofi Launcher & Menus ----------##
+
+# Rofi App Launcher
+alt + d
+	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/aesthetic-night.rasi
+
+# Rofi Network Menu
+# super + n
+# 	nmd
+
+# Rofi Themes Menu
+# ctrl + alt + t
+# 	sh ~/.config/bspwm/rofi/bin/themes
+
+# Rofi Menus/Applets
+# super + {w,m,x,r,s}
+# 	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot}
+
+##---------- Applications ----------##
+
+# Launch Apps
+alt + {e,g}
+	{pcmanfm-qt,firefox}
+
+# Terminal Apps
+# alt + shift + {v,r,h}
+# 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,ranger,htop}
+
+# Color Picker
+alt + p
+	sh ~/.config/scripts/xcolor-pick.sh
+
+# Lockscreen
+super + l
+    sh ~/.config/scripts/lock.sh
+
+##---------- System Keys ----------##
+
+# Take a screenshot
+Print
+	flameshot full
+
+# Take screenshot in 5 second
+# alt + Print
+# 	takeshot --in5
+
+# Take screenshot in 10 second
+# shift + Print
+# 	takeshot --in10
+
+# Take screenshot of active window
+# ctrl + Print
+# 	takeshot --win
+
+# Take screenshot of area
+alt + shift + f
+	flameshot gui
+
+# Brighness control
+XF86MonBrightness{Up,Down}
+	brightness{ --inc, --dec}
+
+# Volume control
+XF86Audio{RaiseVolume,LowerVolume}
+	volume{ --inc, --dec}
+
+XF86AudioMute
+	volume --toggle
+
+XF86AudioMicMute
+	volume --toggle-mic
+
+# Music control
+XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
+
+##---------- Bspwm ----------##
+
+# Close App
+alt + {_,shift + }q
+	bspc node -{c,k}
+
+# Reload Keybindings
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# kill window
+ctrl + alt + Escape
+    xkill
+
+# Quit/Restart bspwm
+alt + shift + {x,r}
+	bspc {quit,wm -r}
+
+# Split horizontal, vertical or cancel
+alt + {h,v,q}
+	bspc node -p {east,south,cancel}
+
+# Preselect the ratio
+alt + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Fullscreen or Monocle
+alt + f
+#	bspc desktop -l next
+    bspc node -t "~"fullscreen
+
+# Toggle beetwen floating & tiled
+alt + space
+    bspc node -t "~"{floating,tiled}
+
+# Pseudo Tiled & tiled mode
+alt + shift + space
+#super + {p,t}
+    bspc node -t "~"{pseudo_tiled,tiled}
+
+# Set the node flags
+alt + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Send the window to another edge of the screen
+alt + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
+	bspc node -f {next.local,prev.local}
+
+# Switch workspace
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch to last opened workspace
+alt + {Tab,grave}
+	bspc {node,desktop} -f last
+
+# Send focused window to another workspace
+alt + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}'
+
+# Expanding windows
+alt + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+
+## Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
+## Move floating windows
+alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Hide/Unhide Window
+alt + shift + i
+	bspwinmask
+
+##---------- EOF ----------##
