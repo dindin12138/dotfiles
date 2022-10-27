@@ -81,7 +81,7 @@ XF86Audio{RaiseVolume,LowerVolume}
 	amixer set Master {5%+,5%-}
 
 XF86AudioMute
-	amixer -q set Master toggle
+	pamixer -t
 
 # XF86AudioMicMute
 # 	volume --toggle-mic
