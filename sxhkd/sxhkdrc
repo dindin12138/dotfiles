@@ -93,28 +93,30 @@ XF86AudioMute
 ##---------- Bspwm ----------##
 
 # Close App
-alt + {_,shift + }q
-	bspc node -{c,k}
+# alt + {_,shift + }q
+# 	bspc node -{k,c}
+alt + shift + q
+	bspc node -k
 
 # Reload Keybindings
-alt + Escape
+alt + b
 	pkill -USR1 -x sxhkd
 
 # kill window
-ctrl + alt + Escape
-    xkill
+# ctrl + alt + Escape
+#     xkill
 
 # Quit/Restart bspwm
 alt + shift + {x,r}
 	bspc {quit,wm -r}
 
 # Split horizontal, vertical or cancel
-alt + {h,v,q}
-	bspc node -p {east,south,cancel}
+# alt + {h,v,q}
+	# bspc node -p {east,south,cancel}
 
 # Preselect the ratio
-alt + ctrl + {1-9}
-	bspc node -o 0.{1-9}
+# alt + ctrl + {1-9}
+# 	bspc node -o 0.{1-9}
 
 # Fullscreen or Monocle
 alt + f
@@ -131,11 +133,13 @@ alt + shift + space
     bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags
-alt + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+# alt + shift + {m,x,y,z}
+	# bspc node -g {marked,locked,sticky,private}
 
 # Send the window to another edge of the screen
 alt + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Change focus to next window, including floating window
@@ -143,12 +147,12 @@ alt + {_,shift + }Tab
 	bspc node -f {next.local,prev.local}
 
 # Switch workspace
-ctrl + alt + {Left,Right}
-	bspc desktop -f {prev.local,next.local}
+# ctrl + alt + {Left,Right}
+	# bspc desktop -f {prev.local,next.local}
 
 # Switch to last opened workspace
-alt + {Tab,grave}
-	bspc {node,desktop} -f last
+# alt + {Tab,grave}
+	# bspc {node,desktop} -f last
 
 # Send focused window to another workspace
 alt + {_,shift + }{1-9}
@@ -157,17 +161,19 @@ alt + {_,shift + }{1-9}
 # Expanding windows
 alt + control + {Left,Right,Up,Down}
 	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+alt + control + {h,l,k,j}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
 
 ## Shrinking windows
-super + alt + {Left,Right,Up,Down}
-	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+# super + alt + {Left,Right,Up,Down}
+# 	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
 
 ## Move floating windows
-alt + shift + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+# alt + shift + {Left,Down,Up,Right}
+# 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Hide/Unhide Window
-alt + shift + i
-	bspwinmask
+# alt + shift + n
+# 	bspwinmask
 
 ##---------- EOF ----------##
