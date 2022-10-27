@@ -223,7 +223,7 @@ label-separator-foreground = ${color.ALTBLACK}
 type = internal/bspwm
 
 format = <label-mode>
-format-background = ${color.YELLOW}
+format-background = ${color.BLUE}
 format-foreground = ${color.BACKGROUND}
 format-padding = 1
 
