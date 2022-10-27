@@ -78,7 +78,7 @@ XF86MonBrightness{Up,Down}
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	amixer set Master {5%+,5%-}
+	pamixer {-i 3,-d 3}
 
 XF86AudioMute
 	pamixer -t
