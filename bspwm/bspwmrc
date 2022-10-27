@@ -30,7 +30,7 @@ ALTWHITE="#ECEFF4"
 ## Bspwm appearance
 CURRENT_BORDER='1'
 CURRENT_GAP='6'
-CURRENT_SRATIO='0.50'
+CURRENT_SRATIO='0.55'
 
 ## Configurations --------------------------------------------#
 

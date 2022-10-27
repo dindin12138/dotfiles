@@ -37,7 +37,7 @@ ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
 ramp-volume-font = 2
-ramp-volume-foreground = ${color.BLUE}
+ramp-volume-foreground = ${color.WHITE}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -75,7 +75,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.YELLOW}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -101,7 +101,7 @@ ramp-7 = 
 ramp-8 = 
 ramp-9 = 
 ramp-font = 2
-ramp-foreground = ${color.MAGENTA}
+ramp-foreground = ${color.YELLOW}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -124,7 +124,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full>
 format-full-prefix = "  "
 format-full-prefix-font = 2
-format-full-prefix-foreground = ${color.RED}
+format-full-prefix-foreground = ${color.GREEN}
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
@@ -136,7 +136,7 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-font = 2
-ramp-capacity-foreground = ${color.YELLOW}
+ramp-capacity-foreground = ${color.GREEN}
 
 animation-charging-0 = 
 animation-charging-1 = 
