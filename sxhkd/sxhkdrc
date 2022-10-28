@@ -96,7 +96,7 @@ XF86AudioMute
 # alt + {_,shift + }q
 # 	bspc node -{k,c}
 alt + shift + q
-	bspc node -k
+	bspc node -c
 
 # Reload Keybindings
 alt + b
