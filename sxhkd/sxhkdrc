@@ -10,45 +10,25 @@ alt + Return
 # alt + shift + Return
 # 	bspterm --float
 
-# Terminal (fullscreen)
-# super + t
-# 	bspterm --full
-
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
 alt + d
 	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/aesthetic-night.rasi
 
-# Rofi Network Menu
-# super + n
-# 	nmd
-
-# Rofi Themes Menu
-# ctrl + alt + t
-# 	sh ~/.config/bspwm/rofi/bin/themes
-
-# Rofi Menus/Applets
-# super + {w,m,x,r,s}
-# 	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot}
-
 ##---------- Applications ----------##
 
 # Launch Apps
-alt + {e,g}
-	{pcmanfm-qt,firefox}
-
-# Terminal Apps
-# alt + shift + {v,r,h}
-# 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,ranger,htop}
+alt + {e,c,g,m,o}
+	{pcmanfm-qt,code,microsoft-edge-stable,alacritty -e ncmpcpp,obsidian}
 
 # Color Picker
 alt + p
-	sh ~/.config/scripts/xcolor-pick.sh
+	sh ~/.config/bspwm/scripts/xcolor-pick.sh
 
 # Lockscreen
 super + l
-    sh ~/.config/scripts/lock.sh
+    sh ~/.config/bspwm/scripts/lock.sh
 
 ##---------- System Keys ----------##
 
@@ -56,33 +36,19 @@ super + l
 Print
 	flameshot full
 
-# Take screenshot in 5 second
-# alt + Print
-# 	takeshot --in5
-
-# Take screenshot in 10 second
-# shift + Print
-# 	takeshot --in10
-
-# Take screenshot of active window
-# ctrl + Print
-# 	takeshot --win
-
 # Take screenshot of area
 alt + shift + f
 	flameshot gui
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	brightnessctl set {5%+,5%-} -q
+	sh ~/.config/bspwm/scripts/brightness {--inc,--dec}
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	pamixer {-i 3,-d 3}
-
+	sh ~/.config/bspwm/scripts/volume {--inc,--dec}
 XF86AudioMute
-	pamixer -t
-
+	sh ~/.config/bspwm/scripts/volume --toggle
 # XF86AudioMicMute
 # 	volume --toggle-mic
 
