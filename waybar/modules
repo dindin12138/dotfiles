@@ -120,11 +120,11 @@
         "tooltip-format-disconnected": "MPD (disconnected)",
 		// Commands to execute on events
         "on-click": "mpc toggle",
-        "on-click-middle": "mpc prev",
-        "on-click-right": "mpc next",
+        // "on-click-middle": "mpc prev",
+        "on-click-right": "alacritty -e ncmpcpp",
         "on-update": "",
-        "on-scroll-up": "mpc seek +00:00:01",
-        "on-scroll-down": "mpc seek -00:00:01",
+        "on-scroll-up": "mpc prev",
+        "on-scroll-down": "mpc next",
         "smooth-scrolling-threshold": 1,
     },
 
@@ -138,7 +138,8 @@
         "format-disconnected": "睊 Disconnected",
         "format-disabled": "睊 Disabled",
         "format-alt": " {bandwidthDownBits} |  {bandwidthUpBits}",
-        "tooltip-format": " {ifname} via {gwaddr}"
+        "tooltip-format": " {ifname} via {gwaddr}",
+        "on-click-right": "nm-connection-editor"
     },
 
 	// weather-custom
