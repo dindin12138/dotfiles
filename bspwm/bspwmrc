@@ -35,7 +35,8 @@ CURRENT_SRATIO='0.55'
 ## Configurations --------------------------------------------#
 
 ## Manager Workspaces
-bspc monitor -d '' '' '' '' '辶' '' '' '' ''
+# bspc monitor -d '' '' '' '' '辶' '' '' '' ''
+bspc monitor -d I II III IV V VI VII VIII IX
 
 ## Apply bspwm configurations
 bspc config border_width "$CURRENT_BORDER"
