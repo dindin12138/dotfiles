@@ -28,7 +28,7 @@ alt + p
 
 # Lockscreen
 super + l
-    sh ~/.config/bspwm/scripts/lock.sh
+  sh ~/.config/bspwm/scripts/lock.sh
 
 ##---------- System Keys ----------##
 
@@ -47,14 +47,16 @@ XF86MonBrightness{Up,Down}
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
 	sh ~/.config/bspwm/scripts/volume {--inc,--dec}
+
 XF86AudioMute
 	sh ~/.config/bspwm/scripts/volume --toggle
+
 # XF86AudioMicMute
 # 	volume --toggle-mic
 
 # Music control
-# XF86Audio{Next,Prev,Play,Stop}
-# 	mpc {next,prev,toggle,stop}
+XF86Audio{Next,Prev,Play,Stop}
+  mpc {next,prev,toggle,stop}
 
 ##---------- Bspwm ----------##
 
@@ -65,7 +67,7 @@ alt + shift + q
 	bspc node -c
 
 # Reload Keybindings
-alt + b
+alt + r
 	pkill -USR1 -x sxhkd
 
 # kill window
@@ -86,17 +88,15 @@ alt + shift + {x,r}
 
 # Fullscreen or Monocle
 alt + f
-#	bspc desktop -l next
-    bspc node -t "~"fullscreen
+  bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
 alt + space
-    bspc node -t "~"{floating,tiled}
+  bspc node -t "~"{floating,tiled}
 
 # Pseudo Tiled & tiled mode
-alt + shift + space
-#super + {p,t}
-    bspc node -t "~"{pseudo_tiled,tiled}
+# alt + shift + space
+  # bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags
 # alt + shift + {m,x,y,z}
