@@ -30,6 +30,10 @@ alt + p
 super + l
   sh ~/.config/bspwm/scripts/lock.sh
 
+# Restart polybar
+alt + shift +p
+  sh ~/.config/polybar/launch.sh
+
 ##---------- System Keys ----------##
 
 # Take a screenshot
