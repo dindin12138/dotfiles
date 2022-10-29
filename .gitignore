@@ -31,5 +31,6 @@
 !/ncmpcpp/
 !/sxhkd/
 !/bspwm/
+!/sddm/
 !/.gitignore
 !/.README.md
