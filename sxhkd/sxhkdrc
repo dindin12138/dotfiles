@@ -2,9 +2,9 @@
 
 ##---------- Keybindings for bspwm ----------##
 
-# Terminal (alacritty)
+# Terminal
 alt + Return
-	alacritty
+	kitty
 
 # Terminal (floating)
 # alt + shift + Return
@@ -20,7 +20,7 @@ alt + d
 
 # Launch Apps
 alt + {e,c,g,m,o}
-	{pcmanfm-qt,code,microsoft-edge-stable,alacritty -e ncmpcpp,obsidian}
+	{pcmanfm-qt,code,microsoft-edge-stable,kitty -e ncmpcpp,obsidian}
 
 # Color Picker
 alt + p
