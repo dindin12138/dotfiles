@@ -44,14 +44,14 @@ Rectangle {
         color: "transparent"
         //visible: primaryScreen
 
-        Clock {
-            id: clock
-            anchors.margins: 10
-            anchors.top: parent.top; anchors.horizontalCenter: parent.horizontalCenter
-
-            color: "#cdd6f4"
-            timeFont.family: "Oxygen"
-        }
+        //Clock {
+        //    id: clock
+        //    anchors.margins: 10
+        //    anchors.top: parent.top; anchors.horizontalCenter: parent.horizontalCenter
+        //
+        //    color: "#cdd6f4"
+        //    timeFont.family: "Oxygen"
+        //}
 
         Image {
             id: rectangle
