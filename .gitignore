@@ -32,5 +32,6 @@
 !/sxhkd/
 !/bspwm/
 !/sddm/
+!/kitty/
 !/.gitignore
 !/.README.md
