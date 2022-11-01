@@ -34,6 +34,10 @@ super + l
 alt + shift +p
   sh ~/.config/polybar/launch.sh
 
+# Change wallpaper
+alt + shift + w
+  feh --no-fehbg --bg-fill --randomize ~/Data/Nutstore/Pictures/Wallpaper/*
+
 ##---------- System Keys ----------##
 
 # Take a screenshot

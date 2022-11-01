@@ -139,7 +139,7 @@ xfce4-power-manager &
 xsetroot -cursor_name left_ptr
 
 # Restore wallpaper
-feh --no-fehbg --bg-fill ~/Data/Nutstore/Pictures/Wallpaper/wallpaper.png
+feh --no-fehbg --bg-fill --randomize ~/Data/Nutstore/Pictures/Wallpaper/*
 
 # Start mpd
 mpd &
