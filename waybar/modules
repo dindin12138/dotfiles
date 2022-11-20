@@ -62,11 +62,16 @@
         //"format-good": "",
         "format-alt": "{icon} {time}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            // "",
+            // "",
+            // "",
+            // "",
+            // ""
+            "",
+            "",
+            "",
+            "",
+            ""
         ],
         "format-time": "{H}h {M}min",
         "tooltip": true
@@ -88,8 +93,8 @@
     },
     // waybar-custom
     "custom/menu": {
-        "format": "",
-        "tooltip": false,
+        "format": "ﮊ",
+        "tooltip": false
         //  "on-click": "$HOME/.config/hypr/scripts/menu"
     },
     "custom/power": {
@@ -158,8 +163,8 @@
         "format": "  {} ",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
-        "interval": 15,
-        "on-click": "foot -e yay -Syu && notify-send 'The system has been updated' "
+        "interval": 15
+        // "on-click": "foot -e yay -Syu && notify-send 'The system has been updated' "
     },
     // waybar-pulseaudio
     "pulseaudio": {
