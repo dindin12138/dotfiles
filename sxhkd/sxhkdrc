@@ -20,7 +20,7 @@ alt + d
 
 # Launch Apps
 alt + {e,c,g,m,o}
-	{pcmanfm-qt,code,microsoft-edge-stable,kitty -e ncmpcpp,obsidian}
+	{thunar,code,microsoft-edge-stable,kitty -e ncmpcpp,obsidian}
 
 # Color Picker
 alt + p
