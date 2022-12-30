@@ -24,7 +24,6 @@
         "wlr/workspaces",
         "hyprland/window"
     ],
-    // "modules-left": ["custom/menu", "wlr/workspaces", "cpu", "memory", "disk", "custom/updater"],
     "modules-center": [
         "clock",
         "mpd"
