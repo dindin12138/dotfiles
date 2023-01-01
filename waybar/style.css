@@ -70,7 +70,7 @@ window#waybar.hidden {
 
 /** ********** Tray ********** **/
 #tray {
-	background-color: #313244;
+	background-color: #1E1E2E;
 }
 
 #tray>.passive {
