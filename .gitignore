@@ -27,7 +27,7 @@
 !/wlogout/
 !/mako/
 !/hypr/
-!/mpd/
+!/mpd/mpd.conf
 !/ncmpcpp/
 !/sxhkd/
 !/bspwm/
