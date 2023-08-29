@@ -9,10 +9,10 @@
         "rotate": 0,
         "format": "{icon} {percent}%",
         "format-icons": [
-            "",
-            "",
-            "",
-            ""
+            "󱩏",
+            "󱩑",
+            "󱩔",
+            "󱩖"
         ],
         "on-click": "",
         "on-click-middle": "",
@@ -32,7 +32,7 @@
             "2": "",
             "3": "",
             "4": "",
-            "5": "辶",
+            "5": "",
             "6": "",
             "7": "",
             "8": "",
@@ -67,11 +67,11 @@
             // "",
             // "",
             // ""
-            "",
-            "",
-            "",
-            "",
-            ""
+            "󰁺",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂"
         ],
         "format-time": "{H}h {M}min",
         "tooltip": true
@@ -89,28 +89,28 @@
     // waybar-cpu
     "cpu": {
         "interval": 5,
-        "format": " LOAD: {usage}%"
+        "format": " LOAD: {usage}%"
     },
     // waybar-custom
     "custom/menu": {
-        "format": "ﮊ",
+        "format": "󰣚",
         "tooltip": false
         //  "on-click": "$HOME/.config/hypr/scripts/menu"
     },
     "custom/power": {
-        "format": "襤",
+        "format": "󰐥",
         "tooltip": false,
         "on-click": "$HOME/.config/hypr/scripts/wlogout"
     },
     // waybar-disk
     "disk": {
         "interval": 30,
-        "format": " FREE: {free}"
+        "format": " FREE: {free}"
     },
     // waybar-memory
     "memory": {
         "interval": 10,
-        "format": " USED: {used:0.1f}G"
+        "format": "󰄪 USED: {used:0.1f}G"
     },
     // waybar-mpd
     "mpd": {
@@ -139,13 +139,13 @@
     "network": {
         "interval": 5,
         //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰖩 {ipaddr}/{cidr}",
+        "format-linked": "󰖩 {ifname} (No IP)",
         "format-disconnected": "睊 Disconnected",
         "format-disabled": "睊 Disabled",
-        "format-alt": " {bandwidthDownBits} |  {bandwidthUpBits}",
-        "tooltip-format": " {ifname} via {gwaddr}",
+        "format-alt": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "tooltip-format": "󰖩 {ifname} via {gwaddr}",
         "on-click-right": "nm-connection-editor"
     },
     // weather-custom
@@ -160,7 +160,7 @@
     },
     // updater-custom
     "custom/updater": {
-        "format": "  {} ",
+        "format": "󰏔 {}",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) ]]",
         "interval": 15
