@@ -12,7 +12,7 @@ file="Screenshot_${time}_${RANDOM}.png"
 notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-notify -u low -i ${iDIR}/picture.png"
 notify_view () {
 	${notify_cmd_shot} "Copied to clipboard."
-	viewnior ${dir}/"$file"
+	swappy -f ${dir}/"$file"
 	if [[ -e "$dir/$file" ]]; then
 		${notify_cmd_shot} "Screenshot Saved."
 	else
@@ -54,7 +54,7 @@ shotwin () {
 }
 
 shotarea () {
-	cd ${dir} && grim -g "$(slurp -b 1B1F28CC -c E06B74ff -s C778DD0D -w 2)" - | tee "$file" | wl-copy
+	cd ${dir} && grim -g "$(slurp -b 1B1F28CC -c E06B74ff -s C778DD0D -w 0)" - | tee "$file" | wl-copy
 	notify_view
 }
 

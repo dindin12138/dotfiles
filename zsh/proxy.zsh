@@ -16,3 +16,5 @@ function unsetproxy() {
 function catproxy() {
     echo $ALL_PROXY
 }
+
+setproxy

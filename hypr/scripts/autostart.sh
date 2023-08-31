@@ -14,10 +14,10 @@ done
 /usr/lib/xfce-polkit/xfce-polkit &
 
 # Set wallpaper
-swaybg --output '*' --mode fill --image ~/Data/Nutstore/Pictures/Wallpaper/wallpaper.png &
+swaybg --output '*' --mode fill --image ~/Pictures/linglong.jpeg &
 
 # Apply themes
-~/.config/hypr/scripts/gtkthemes-bkp &
+~/.config/hypr/scripts/gtkthemes-bkp.sh &
 
 # Lauch notification daemon (mako)
 exec mako &
@@ -27,8 +27,8 @@ exec waybar --bar main-bar --log-level error &
 
 exec fcitx5 -d &
 
-exec mpd &
+#exec mpd &
 
 exec cfw &
 
-exec nutstore &
+#exec nutstore &

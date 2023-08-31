@@ -33,5 +33,7 @@
 !/bspwm/
 !/sddm/
 !/kitty/
+!/joshuto/
+!/starship.toml
 !/.gitignore
 !/.README.md

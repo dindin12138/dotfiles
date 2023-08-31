@@ -1,8 +1,8 @@
 alias lazyvim="NVIM_APPNAME=LazyVim nvim"
-alias nvchad="NVIM_APPNAME=NvChad nvim"
+alias vscode-neovim="NVIM_APPNAME=VSCode-Neovim nvim"
 
 function nvims() {
-  items=("Default" "LazyVim" "NvChad")
+  items=("Default" "LazyVim" "VSCode-Neovim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -12,5 +12,3 @@ function nvims() {
   fi
   NVIM_APPNAME=$config nvim $@
 }
-
-bindkey -s ^a "nvims\n"

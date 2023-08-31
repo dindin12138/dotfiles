@@ -100,7 +100,7 @@
     "custom/power": {
         "format": "󰐥",
         "tooltip": false,
-        "on-click": "$HOME/.config/hypr/scripts/wlogout"
+        "on-click": "$HOME/.config/hypr/scripts/wlogout.sh"
     },
     // waybar-disk
     "disk": {
