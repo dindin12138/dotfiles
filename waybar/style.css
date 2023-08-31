@@ -159,16 +159,14 @@ window#waybar.hidden {
 
 #custom-updater {
 	background-color: #e6ed7b;
-	margin-right: 6px;
 	padding: 2px 8px;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #custom-weather {
 	background-color: #cba6f7;
-	margin-right: 6px;
 	padding: 2px 8px;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #window {

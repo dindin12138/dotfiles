@@ -25,10 +25,11 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "clock",
-        "mpd"
+        "clock"
     ],
     "modules-right": [
+        "custom/weather",
+        "custom/updater",
         "network",
         "cpu",
         "memory",
