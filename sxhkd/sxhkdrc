@@ -50,14 +50,14 @@ alt + shift + f
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	sh ~/.config/bspwm/scripts/brightness {--inc,--dec}
+	sh ~/.config/bspwm/scripts/brightness.sh {--inc,--dec}
 
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	sh ~/.config/bspwm/scripts/volume {--inc,--dec}
+	sh ~/.config/bspwm/scripts/volume.sh {--inc,--dec}
 
 XF86AudioMute
-	sh ~/.config/bspwm/scripts/volume --toggle
+	sh ~/.config/bspwm/scripts/volume.sh --toggle
 
 # XF86AudioMicMute
 # 	volume --toggle-mic
