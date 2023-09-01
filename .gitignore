@@ -3,22 +3,10 @@
 /*/
 
 # ... but these:
-#!/awesome/
-#!/picom/
 !/alacritty/
-#!/ranger/
-#!/i3/
-#!/i3status/
-#!/dunst/
 !/fcitx5/
-#!/polybar/
 !/zsh/
-#!/rofi/
 !/pip/
-#!/img/
-#!/flameshot/
-#!/libinput-gestures.conf
-#!/scripts/
 !/bat/
 !/btop/
 !/cava/
@@ -29,8 +17,6 @@
 !/hypr/
 !/mpd/mpd.conf
 !/ncmpcpp/
-#!/sxhkd/
-#!/bspwm/
 !/sddm/
 !/kitty/
 !/joshuto/
