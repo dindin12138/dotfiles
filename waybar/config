@@ -28,7 +28,6 @@
         "clock"
     ],
     "modules-right": [
-        "custom/weather",
         "custom/updater",
         "network",
         "cpu",
