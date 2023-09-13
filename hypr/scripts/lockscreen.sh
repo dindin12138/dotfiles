@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Background Image
-IMAGE="$HOME/Data/Nutstore/Pictures/Wallpaper/lockscreen.png"
+IMAGE="~/Data/Nutstore/Pictures/Wallpaper/lake.png"
 
 # Colors
 bg='1e1e2e'		bgl='313244'		fg='d9e0ee'
@@ -20,7 +20,7 @@ swaylock -f \
 	\
 	`# Appearance` \
 	--color ${bg}E6 \
-	`#--image ${IMAGE} --scaling fill` \
+	--image ${IMAGE} --scaling fill \
 	--font 'JetBrainsMono Nerd Font' --font-size 18 \
 	\
 	`# Backspace Key` \

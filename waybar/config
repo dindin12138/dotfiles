@@ -21,7 +21,7 @@
     "ipc": true,
     "modules-left": [
         "custom/menu",
-        "wlr/workspaces",
+        "hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-center": [
