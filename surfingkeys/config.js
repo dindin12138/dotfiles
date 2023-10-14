@@ -29,7 +29,6 @@ Hints.setCharacters('asdfgyuiopqwertnmzxcvb');
 
 settings.defaultSearchEngine = 'g';
 settings.hintAlign = 'left';
-settings.omnibarPosition = 'bottom';
 settings.focusFirstCandidate = false;
 settings.focusAfterClosed = 'last';
 settings.scrollStepSize = 200;
