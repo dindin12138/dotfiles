@@ -27,7 +27,6 @@ const {
 // ---- Settings ----
 Hints.setCharacters('asdfgyuiopqwertnmzxcvb');
 
-settings.defaultSearchEngine = 'g';
 settings.hintAlign = 'left';
 settings.focusFirstCandidate = false;
 settings.focusAfterClosed = 'last';
@@ -36,7 +35,8 @@ settings.tabsThreshold = 0;
 settings.modeAfterYank = 'Normal';
 
 // Open Hint in new tab
-map('F', 'C');
+map('F', 'af');
+map('af', 'C');
 
 // Open Clipboard URL in current tab
 mapkey('p', "Open the clipboard's URL in the current tab", () => { Clipboard.read(function(response) { window.location.href = response.data; }); });
