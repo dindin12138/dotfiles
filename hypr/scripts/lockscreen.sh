@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Background Image
-IMAGE="~/Data/Nutstore/Pictures/Wallpaper/lake.png"
+IMAGE="~/Pictures/lockscreen.png"
 
 # Colors
 bg='1e1e2e'		bgl='313244'		fg='d9e0ee'

@@ -14,7 +14,7 @@ done
 /usr/lib/xfce-polkit/xfce-polkit &
 
 # Set wallpaper
-swaybg --output '*' --mode fill --image ~/Pictures/linglong.jpeg &
+swaybg --output '*' --mode fill --image ~/Pictures/wallpaper.png &
 
 # Apply themes
 ~/.config/hypr/scripts/gtkthemes-bkp.sh &

@@ -94,8 +94,8 @@
     // waybar-custom
     "custom/menu": {
         "format": "󰣚",
-        "tooltip": false
-        //  "on-click": "$HOME/.config/hypr/scripts/menu"
+        "tooltip": false,
+        "on-click": "$HOME/.config/hypr/scripts/wofi.sh"
     },
     "custom/power": {
         "format": "󰐥",
