@@ -4,9 +4,9 @@
 
 iDIR="$HOME/.config/mako/icons"
 
-time=`date +%Y-%m-%d-%H-%M-%S`
+time=`date +%Y%m%d-%H%M%S`
 dir="`xdg-user-dir PICTURES`/Screenshots"
-file="Screenshot_${time}_${RANDOM}.png"
+file="${time}.png"
 
 # notify and view screenshot
 notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-notify -u low -i ${iDIR}/picture.png"
