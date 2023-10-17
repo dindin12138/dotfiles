@@ -4,7 +4,7 @@ alias ll='exa -lh --group-directories-first --git'
 alias lt='exa -T --git-ignore --level=2 --group-directories-first'
 
 alias ra="joshuto"
-alias nf="neofetch --ascii_distro Arch"
+alias nf="neofetch"
 alias vim="nvim"
 alias vi="nvim"
 alias cat="bat"
