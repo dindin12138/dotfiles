@@ -68,15 +68,18 @@ handle_extension() {
             ## Archive
             a|ace|alz|arc|arj|bz|bz2|cab|cpio|deb|gz|jar|lha|lz|lzh|lzma|lzo|\
             rpm|rz|t7z|tar|tbz|tbz2|tgz|tlz|txz|tZ|tzo|war|xpi|xz|Z|zip)
+            # PKG: atool
             atool --list -- "${FILE_PATH}" && exit 0
             bsdtar --list --file "${FILE_PATH}" && exit 0
             exit 1 ;;
         rar)
             ## Avoid password prompt by providing empty password
+            # PKG: unrar
             unrar lt -p- -- "${FILE_PATH}" && exit 0
             exit 1 ;;
         7z)
             ## Avoid password prompt by providing empty password
+            # PKG: p7zip
             7z l -p -- "${FILE_PATH}" && exit 0
             exit 1 ;;
 
@@ -94,6 +97,7 @@ handle_extension() {
 
             ## BitTorrent
         torrent)
+            # PKG: transmission-cli
             transmission-show -- "${FILE_PATH}" && exit 0
             exit 1 ;;
 
@@ -134,7 +138,9 @@ handle_extension() {
             ## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
             ## by file(1).
         dff|dsf|wv|wvc)
+            # PKG: mediainfo
             mediainfo "${FILE_PATH}" && exit 0
+            # PKG: perl-image-exiftool
             exiftool "${FILE_PATH}" && exit 0
             ;; # Continue with next handler on failure
     esac
@@ -178,7 +184,7 @@ handle_mime() {
             exit 1 ;;
 
             ## Text
-        text/* | */xml)
+        text/* | */xml | application/x-subrip | application/x-ndjson | */json | */javascript | inode/x-empty)
             bat --color=always --paging=never \
                 --style=plain \
                 --terminal-width="${PREVIEW_WIDTH}" \
@@ -189,26 +195,26 @@ handle_mime() {
             ## DjVu
         image/vnd.djvu)
             ## Preview as text conversion (requires djvulibre)
+            echo && exit 0
             djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
             exiftool "${FILE_PATH}" && exit 0
             # file "${FILE_PATH}" && exit 0
-            echo && exit 0
             exit 1 ;;
 
             ## Image
         image/*)
             ## Preview as text conversion
+            echo && exit 0
             exiftool "${FILE_PATH}" && exit 0
             # file "${FILE_PATH}" && exit 0
-            echo && exit 0
             exit 1 ;;
 
             ## Video and audio
         video/* | audio/*)
+            echo && exit 0
             mediainfo "${FILE_PATH}" && exit 0
             exiftool "${FILE_PATH}" && exit 0
             # file "${FILE_PATH}" && exit 0
-            echo && exit 0
             exit 1 ;;
     esac
 }
