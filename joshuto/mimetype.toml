@@ -7,9 +7,6 @@ audio_default = [
 ]
 
 image_default = [
-  { command = "swappy", args = [
-    "-f",
-  ], fork = true },
   { command = "qimgv", args = [
     "--",
   ], fork = true, silent = true },
@@ -17,6 +14,9 @@ image_default = [
     "--",
   ], fork = true, silent = true },
   { command = "exiftool", confirm_exit = true },
+  { command = "swappy", args = [
+    "-f",
+  ], fork = true },
 ]
 
 video_default = [
@@ -125,6 +125,7 @@ log.inherit = "text_default"
 md.inherit = "text_default"
 micro.inherit = "text_default"
 ninja.inherit = "text_default"
+org.inherit = "text_default"
 py.inherit = "text_default"
 rkt.inherit = "text_default"
 rs.inherit = "text_default"

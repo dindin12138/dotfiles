@@ -83,11 +83,13 @@ handle_extension() {
             ## PDF
         pdf)
             ## Preview as text conversion
+            echo && exit 0
             pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - | \
                 fmt -w "${PREVIEW_WIDTH}" && exit 0
             mutool draw -F txt -i -- "${FILE_PATH}" 1-10 | \
                 fmt -w "${PREVIEW_WIDTH}" && exit 0
             exiftool "${FILE_PATH}" && exit 0
+            # file "${FILE_PATH}" && exit 0
             exit 1 ;;
 
             ## BitTorrent
@@ -189,18 +191,24 @@ handle_mime() {
             ## Preview as text conversion (requires djvulibre)
             djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
             exiftool "${FILE_PATH}" && exit 0
+            # file "${FILE_PATH}" && exit 0
+            echo && exit 0
             exit 1 ;;
 
             ## Image
         image/*)
             ## Preview as text conversion
             exiftool "${FILE_PATH}" && exit 0
+            # file "${FILE_PATH}" && exit 0
+            echo && exit 0
             exit 1 ;;
 
             ## Video and audio
         video/* | audio/*)
             mediainfo "${FILE_PATH}" && exit 0
             exiftool "${FILE_PATH}" && exit 0
+            # file "${FILE_PATH}" && exit 0
+            echo && exit 0
             exit 1 ;;
     esac
 }
