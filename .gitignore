@@ -15,8 +15,15 @@
 !/wlogout/
 !/mako/
 !/hypr/
-!/mpd/mpd.conf
+!/mpd/
+/mpd/log
+/mpd/pid
+/mpd/state
+/mpd/sticker.sql
+/mpd/database
 !/ncmpcpp/
+/ncmpcpp/error.log
+/ncmpcpp/previews
 !/sddm/
 !/kitty/
 !/joshuto/

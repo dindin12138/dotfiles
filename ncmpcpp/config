@@ -1,61 +1,81 @@
-### Directories ###
-mpd_music_dir       = "~/Data/Media/Music/"
-mpd_host 		  	= "localhost"
-mpd_port 		  	= "6600"
-mpd_crossfade_time 	= "2"
+##############################################################
+## This is an example configuration file. Copy it to        ##
+## $XDG_CONFIG_HOME/ncmpcpp/config or $HOME/.ncmpcpp/config ##
+## and set up your preferences.                             ##
+##############################################################
 
-### Script ###
-# execute_on_song_change = "kunst --size 60x60 --silent"
+mpd_host = "127.0.0.1"
+mpd_port = 6600
+mpd_connection_timeout = "5"  
+mpd_crossfade_time = "5"
+mpd_music_dir = ~/Music
+lyrics_directory  = ~/.config/ncmpcpp/lyrics
+# execute_on_song_change  = "~/.config/hypr/scripts/songinfo.sh"
 
-### Behaviour ###
-message_delay_time 				 = 1
-autocenter_mode 				 = "yes"
-centered_cursor 				 = "yes"
-ignore_leading_the 				 = "yes"
-playlist_disable_highlight_delay = 2
-allow_for_physical_item_deletion = "no"
-
-### Visualizer ###
 visualizer_data_source = /tmp/mpd.fifo
-visualizer_output_name = "mpd_visualizer"
-visualizer_in_stereo   = "yes"
-visualizer_look 	   = ●●
-visualizer_type 	   = "ellipse"
+visualizer_output_name = my_fifo
 
-### Appearance ###
+visualizer_in_stereo = "yes"
+visualizer_fps = "60"
+visualizer_type = "ellipse"
+visualizer_look = ●●
+visualizer_color = "33,39,63,75,81,99,117,153,189"
+visualizer_spectrum_smooth_look = "yes"
+
+# GENERAL
+# ---
+connected_message_on_startup = "yes"
+cyclic_scrolling = "yes"
+mouse_support = "no"
+mouse_list_scroll_whole_page = "yes"
+lines_scrolled = "1"
+message_delay_time = "1"
+playlist_shorten_total_times = "yes"
 playlist_display_mode = "columns"
-colors_enabled 		  = "yes"
-#user_interface       = classic
-user_interface 		  = alternative
-volume_color 		  = "white"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+playlist_editor_display_mode = "columns"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+user_interface = "classic"
+follow_now_playing_lyrics = "yes"
+fetch_lyrics_for_current_song_in_background = "yes"
+store_lyrics_in_song_dir = "no"
+locked_screen_width_part = "50"
+ask_for_locked_screen_width_part = "yes"
+display_bitrate = "no"
+external_editor = "nano"
+main_window_color = "default"
+startup_screen = "playlist"
 
-### Window ###
-song_window_title_format = "{%a - }{%t}|{%f}"
-statusbar_visibility 	 = "no"
-header_visibility 		 = "no"
-titles_visibility 		 = "no"
+# PROGRESS BAR
+# ---
+progressbar_look = "▪▪▪"
+#progressbar_look = "▃▃▃"
+progressbar_elapsed_color = "magenta"
+progressbar_color = "black"
 
-### Progress bar ###
-progressbar_look 			= "▂▂▂"
-progressbar_color 			= "black"
-progressbar_elapsed_color   = "blue"
+# UI VISIBILITY
+# ---
+header_visibility = "no"
+statusbar_visibility = "yes"
+titles_visibility = "yes"
+enable_window_title = "yes"
 
-### Alternative UI ###
-alternative_ui_separator_color 		  = "black"
-alternative_header_first_line_format  = $b$5$/b  $b$8{%t}|{%f}$/b $/b
-alternative_header_second_line_format = {$b{$2  %a$9}{ - $7  %b$9}{ ($2%y$9)}}|{%D}
-
-### Song list ###
-song_status_format		 = "$7%t"
-song_list_format 		 = "  %t $R%a %l  "
-song_library_format 	 = {{%a - %t} (%b)}|{%f}
-song_columns_list_format = "(53)[white]{tr} (45)[blue]{a}"
-
-### Colors ###
-main_window_color 					= "blue"
-current_item_prefix 				= "$(blue)$r"
-current_item_suffix 				= "$/r$(end)"
-current_item_inactive_column_prefix = red
-current_item_inactive_column_suffix = red
+# COLORS
+# ---
+statusbar_color = "white"
 color1 = "white"
-color2 = "red"
+color2 = "blue"
+
+# UI APPEARANCE
+# ---
+now_playing_prefix = "$b$2$7 "
+now_playing_suffix = "  $/b$8"
+current_item_prefix = "$b$7$/b$3 "
+current_item_suffix = "  $8"
+
+song_columns_list_format = "(50)[]{t|fr:Title} (0)[magenta]{a}"
+song_list_format = " {%t $R   $8%a$8}|{%f $R   $8%l$8} $8"
+song_status_format = "$b$2󰣐 $7 {$b$6$8 %t $6} $7 $8"
+song_window_title_format = "Now Playing .."

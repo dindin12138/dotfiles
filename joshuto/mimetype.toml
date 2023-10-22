@@ -7,6 +7,9 @@ audio_default = [
 ]
 
 image_default = [
+  { command = "swappy", args = [
+    "-f",
+  ], fork = true },
   { command = "qimgv", args = [
     "--",
   ], fork = true, silent = true },
@@ -14,9 +17,6 @@ image_default = [
     "--",
   ], fork = true, silent = true },
   { command = "exiftool", confirm_exit = true },
-  { command = "swappy", args = [
-    "-f",
-  ], fork = true },
 ]
 
 video_default = [
@@ -41,8 +41,8 @@ text_default = [
 ]
 
 reader_default = [
-  { command = "evince", fork = true, silent = true },
   { command = "google-chrome-stable", fork = true, silent = true },
+  { command = "evince", fork = true, silent = true },
 ]
 
 libreoffice_default = [{ command = "libreoffice", fork = true, silent = true }]

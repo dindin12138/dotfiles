@@ -3,7 +3,7 @@
     "name": "main-bar",
     "id": "main-bar",
     "layer": "top",
-    "mode": "dock",
+    // "mode": "dock",
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -24,7 +24,8 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "mpd"
     ],
     "modules-right": [
         "custom/updater",

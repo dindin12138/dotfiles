@@ -17,6 +17,11 @@ window#waybar.hidden {
 	opacity: 0.5;
 }
 
+tooltip {
+    border-radius: 2px;
+    background-color: #1e1e2e;
+}
+
 /** ********** Backlight ********** **/
 #backlight {
 	background-color: #cba6f7;
