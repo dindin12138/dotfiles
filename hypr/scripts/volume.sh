@@ -6,7 +6,7 @@ iDIR="$HOME/.config/mako/icons"
 
 # Get Volume
 get_volume() {
-	volume=`pamixer --get-volume | awk -F ' ' '{print $1}' | tr -d '[]'`
+	volume=$(pamixer --get-volume | awk -F ' ' '{print $1}' | tr -d '[]')
 	echo "$volume"
 }
 

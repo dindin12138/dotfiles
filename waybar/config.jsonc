@@ -28,7 +28,7 @@
         "mpd"
     ],
     "modules-right": [
-        "custom/updater",
+        // "custom/updater",
         "network",
         "cpu",
         "memory",

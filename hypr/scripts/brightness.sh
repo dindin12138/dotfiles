@@ -6,7 +6,7 @@ iDIR="$HOME/.config/mako/icons"
 
 # Get brightness
 get_backlight() {
-	LIGHT=$(printf "%.0f\n" `light -G`)
+	LIGHT=$(printf "%.0f\n" $(light -G))
 	echo "${LIGHT}%"
 }
 

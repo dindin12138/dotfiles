@@ -5,7 +5,7 @@ CONFIG="$HOME/.config/wofi/config"
 STYLE="$HOME/.config/wofi/style.css"
 COLORS="$HOME/.config/wofi/colors"
 
-if [[ ! `pidof wofi` ]]; then
+if [[ ! $(pidof wofi) ]]; then
 	wofi --show drun --prompt 'Search...' --conf ${CONFIG} --style ${STYLE} --color ${COLORS}
 else
 	pkill wofi

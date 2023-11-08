@@ -4,13 +4,13 @@
 
 iDIR="$HOME/.config/mako/icons"
 
-time=`date +%Y%m%d-%H%M%S`
-dir="`xdg-user-dir PICTURES`/Screenshots"
+time=$(date +%Y%m%d-%H%M%S)
+dir="$(xdg-user-dir PICTURES)/Screenshots"
 file="${time}.png"
 
 # notify and view screenshot
 notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-notify -u low -i ${iDIR}/picture.png"
-notify_view () {
+notify_view() {
 	${notify_cmd_shot} "Copied to clipboard."
 	swappy -f ${dir}/"$file"
 	if [[ -e "$dir/$file" ]]; then
@@ -21,39 +21,39 @@ notify_view () {
 }
 
 # countdown
-countdown () {
-	for sec in `seq $1 -1 1`; do
+countdown() {
+	for sec in $(seq $1 -1 1); do
 		notify-send -h string:x-canonical-private-synchronous:shot-notify -t 1000 -i "$iDIR"/timer.png "Taking shot in : $sec"
 		sleep 1
 	done
 }
 
 # take shots
-shotnow () {
+shotnow() {
 	cd ${dir} && grim - | tee "$file" | wl-copy
 	notify_view
 }
 
-shot5 () {
+shot5() {
 	countdown '5'
 	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
 	notify_view
 }
 
-shot10 () {
+shot10() {
 	countdown '10'
 	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
 	notify_view
 }
 
-shotwin () {
-	w_pos=`hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1`
-	w_size=`hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g`
+shotwin() {
+	w_pos=$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1)
+	w_size=$(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)
 	cd ${dir} && grim -g "$w_pos $w_size" - | tee "$file" | wl-copy
 	notify_view
 }
 
-shotarea () {
+shotarea() {
 	cd ${dir} && grim -g "$(slurp -b 1B1F28CC -c E06B74ff -s C778DD0D -w 0)" - | tee "$file" | wl-copy
 	notify_view
 }
