@@ -3,7 +3,6 @@
 /*/
 
 # ... but these:
-!/alacritty/
 !/fcitx5/
 !/zsh/
 !/pip/

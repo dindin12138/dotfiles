@@ -11,23 +11,23 @@ if [[ "$1" == '--shutdown' ]]; then
 	# cdialog
 	if [[ "$?" == 0 ]]; then
 		systemctl poweroff
-    else
+	else
 		exit
-    fi
+	fi
 elif [[ "$1" == '--reboot' ]]; then
 	# cdialog
 	if [[ "$?" == 0 ]]; then
 		systemctl reboot
-    else
+	else
 		exit
-    fi
+	fi
 elif [[ "$1" == '--hibernate' ]]; then
 	# cdialog
 	if [[ "$?" == 0 ]]; then
 		systemctl hibernate
-    else
+	else
 		exit
-    fi
+	fi
 elif [[ "$1" == '--lock' ]]; then
 	~/.config/hypr/scripts/lockscreen.sh
 elif [[ "$1" == '--suspend' ]]; then
@@ -37,14 +37,14 @@ elif [[ "$1" == '--suspend' ]]; then
 		amixer set Master mute
 		~/.config/hypr/scripts/lockscreen.sh
 		systemctl suspend
-    else
+	else
 		exit
-    fi
+	fi
 elif [[ "$1" == '--logout' ]]; then
 	# cdialog
 	if [[ "$?" == 0 ]]; then
 		kill -9 -1
-    else
+	else
 		exit
-    fi
+	fi
 fi
