@@ -1,43 +1,27 @@
 [class]
 audio_default = [
-  { command = "mpv", args = [
-    "--",
-  ] },
+  { command = "mpv", args = [ "--" ] },
   { command = "mediainfo", confirm_exit = true },
 ]
 
 image_default = [
-  { command = "swappy", args = [
-    "-f",
-  ], fork = true },
-  { command = "qimgv", args = [
-    "--",
-  ], fork = true, silent = true },
-  { command = "krita", args = [
-    "--",
-  ], fork = true, silent = true },
+  { command = "swappy", args = [ "-f" ], fork = true },
+  { command = "qimgv", args = [ "--" ], fork = true, silent = true },
+  { command = "krita", args = [ "--" ], fork = true, silent = true },
   { command = "exiftool", confirm_exit = true },
 ]
 
 video_default = [
-  { command = "mpv", args = [
-    "--",
-  ], fork = true, silent = true },
+  { command = "mpv", args = [ "--" ], fork = true, silent = true },
   { command = "mediainfo", confirm_exit = true },
-  { command = "mpv", args = [
-    "--mute",
-    "on",
-    "--",
-  ], fork = true, silent = true },
+  { command = "mpv", args = [ "--mute", "on", "--" ], fork = true, silent = true },
 ]
 
 text_default = [
   { command = "nvim"},
   { command = "micro" },
   { command = "gedit", fork = true, silent = true },
-  { command = "bat", args = [
-    "--paging=always",
-  ] },
+  { command = "bat", args = [ "--paging=always" ] },
 ]
 
 reader_default = [
