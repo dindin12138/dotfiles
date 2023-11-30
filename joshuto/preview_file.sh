@@ -93,14 +93,13 @@ handle_extension() {
 		## PDF
 	pdf)
 		## Preview as text conversion
-		echo && exit 0
-		pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - |
-			fmt -w "${PREVIEW_WIDTH}" && exit 0
-		mutool draw -F txt -i -- "${FILE_PATH}" 1-10 |
-			fmt -w "${PREVIEW_WIDTH}" && exit 0
-		exiftool "${FILE_PATH}" && exit 0
+		# pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - |
+		# 	fmt -w "${PREVIEW_WIDTH}" && exit 0
+		# mutool draw -F txt -i -- "${FILE_PATH}" 1-10 |
+		# 	fmt -w "${PREVIEW_WIDTH}" && exit 0
+		# exiftool "${FILE_PATH}" && exit 0
 		# file "${FILE_PATH}" && exit 0
-		exit 1
+		exit 0
 		;;
 
 		## BitTorrent
@@ -212,29 +211,26 @@ handle_mime() {
 		## DjVu
 	image/vnd.djvu)
 		## Preview as text conversion (requires djvulibre)
-		echo && exit 0
-		djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
-		exiftool "${FILE_PATH}" && exit 0
+		# djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
+		# exiftool "${FILE_PATH}" && exit 0
 		# file "${FILE_PATH}" && exit 0
-		exit 1
+		exit 0
 		;;
 
 		## Image
 	image/*)
 		## Preview as text conversion
-		echo && exit 0
-		exiftool "${FILE_PATH}" && exit 0
+		# exiftool "${FILE_PATH}" && exit 0
 		# file "${FILE_PATH}" && exit 0
-		exit 1
+		exit 0
 		;;
 
 		## Video and audio
 	video/* | audio/*)
-		echo && exit 0
-		mediainfo "${FILE_PATH}" && exit 0
-		exiftool "${FILE_PATH}" && exit 0
+		# mediainfo "${FILE_PATH}" && exit 0
+		# exiftool "${FILE_PATH}" && exit 0
 		# file "${FILE_PATH}" && exit 0
-		exit 1
+		exit 0
 		;;
 	esac
 }
