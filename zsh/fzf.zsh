@@ -13,22 +13,22 @@ function f() {
     if [[ -n "$1" ]]; then
         local original_dir=$(pwd)
         z "$1"
-        fzf --prompt=" FZF Preview 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always {}'
+        fzf --prompt=" FZF Preview 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always --style=plain {}'
         cd "$original_dir"
     else
-        fzf --prompt=" FZF Preview 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always {}'
+        fzf --prompt=" FZF Preview 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always --style=plain {}'
     fi
 }
 
 function fv() {
     if [[ -n "$1" ]]; then
         z "$1"
-        local file=$(fzf --prompt=" FZF Neovim 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always {}')
+        local file=$(fzf --prompt=" FZF Neovim 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always --style=plain {}')
         if [[ -n "$file" ]]; then
             nvim "$file"
         fi
     else
-        local file=$(fzf --prompt=" FZF Neovim 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always {}')
+        local file=$(fzf --prompt=" FZF Neovim 󰄾 " --height 50% --layout reverse --border --preview 'bat --color=always --style=plain {}')
         if [[ -n "$file" ]]; then
             nvim "$file"
         fi

@@ -34,7 +34,7 @@ elif [[ "$1" == '--suspend' ]]; then
 	# cdialog
 	if [[ "$?" == 0 ]]; then
 		mpc -q pause
-		amixer set Master mute
+		pamixer -t
 		~/.config/hypr/scripts/lockscreen.sh
 		systemctl suspend
 	else
