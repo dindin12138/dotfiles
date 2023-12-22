@@ -4,11 +4,12 @@ alias ll='exa -lh --group-directories-first --git'
 alias lt='exa -T --git-ignore --level=2 --group-directories-first'
 
 alias ra="joshuto"
-alias ff="fastfetch"
+alias nf="fastfetch"
 alias vim="nvim"
 alias vi="nvim"
 alias cat="bat"
 alias icat="kitty +kitten icat"
+alias lg="lazygit"
 
 alias code-cpp="code --profile 'Clangd Development'"
 alias code-rust="code --profile 'Rust Development'"
