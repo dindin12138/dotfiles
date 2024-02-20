@@ -10,6 +10,7 @@ alias vi="nvim"
 alias cat="bat"
 alias icat="kitty +kitten icat"
 alias lg="lazygit"
+alias ts="sudo -E timeshift-launcher"
 
 alias code-cpp="code --profile 'Clangd Development'"
 alias code-rust="code --profile 'Rust Development'"
