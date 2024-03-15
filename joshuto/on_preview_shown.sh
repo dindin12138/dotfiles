@@ -26,6 +26,7 @@ function video {
 }
 
 function pdf {
+	# PKG: poppler
 	pdftoppm -png -f 1 -singlefile "${FILE_PATH}" "${TMP_FILE%.png}" 2>/dev/null
 	image "${TMP_FILE}"
 }

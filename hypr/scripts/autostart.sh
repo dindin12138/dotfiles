@@ -3,7 +3,7 @@
 ## Autostart Programs
 
 # Kill already running process
-_ps=(waybar mako mpd xfce-polkit)
+_ps=(waybar mako mpd xfce-polkit polkit-gnome-authentication-agent-1)
 for _prs in "${_ps[@]}"; do
 	if [[ $(pidof ${_prs}) ]]; then
 		killall -9 ${_prs}
@@ -11,13 +11,15 @@ for _prs in "${_ps[@]}"; do
 done
 
 # Polkit agent
-/usr/lib/xfce-polkit/xfce-polkit &
+# /usr/lib/xfce-polkit/xfce-polkit &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Set wallpaper
 swaybg --output '*' --mode fill --image ~/Pictures/wallpaper.png &
 
+
 # Apply themes
-~/.config/hypr/scripts/gtkthemes-bkp.sh &
+# ~/.config/hypr/scripts/gtkthemes-bkp.sh &
 
 # Lauch notification daemon (mako)
 exec mako &
